@@ -41,13 +41,13 @@ $$
 * **$A^2 = A \cdot A$:**
 
 $$
-A^2 = \begin{pmatrix} 2 & 1 \\\ 0 & 2 \end{pmatrix} \begin{pmatrix} 2 & 1 \\\ 0 & 2 \end{pmatrix} = \begin{pmatrix} (2)(2) + (1)(0) & (2)(1) + (1)(2) \\\ (0)(2) + (2)(0) & (0)(1) + (2)(2) \end{pmatrix} = \begin{pmatrix} 4 & 2 + 2 \\\ 0 & 4 \end{pmatrix} = \begin{pmatrix} 4 & 4 \\\ 0 & 4 \end{pmatrix}
+A^2 = \begin{pmatrix} 2 & 1 \\\ 0 & 2 \end{pmatrix} \begin{pmatrix} 2 & 1 \\\ 0 & 2 \end{pmatrix} = \begin{pmatrix} (2)(2) + (1)(0) & (2)(1) + (1)(2) \\\ (0)(2) + (2)(0) & (0)(1) + (2)(2) \end{pmatrix} = \begin{pmatrix} 4 & 4 \\\ 0 & 4 \end{pmatrix}
 $$
 
 * **$A^3 = A^2 \cdot A$:**
 
 $$
-A^3 = \begin{pmatrix} 4 & 4 \\\ 0 & 4 \end{pmatrix} \begin{pmatrix} 2 & 1 \\\ 0 & 2 \end{pmatrix} = \begin{pmatrix} (4)(2) + (4)(0) & (4)(1) + (4)(2) \\\ (0)(2) + (4)(0) & (0)(1) + (4)(2) \end{pmatrix} = \begin{pmatrix} 8 & 4 + 8 \\\ 0 & 8 \end{pmatrix} = \begin{pmatrix} 8 & 12 \\\ 0 & 8 \end{pmatrix}
+A^3 = \begin{pmatrix} 4 & 4 \\\ 0 & 4 \end{pmatrix} \begin{pmatrix} 2 & 1 \\\ 0 & 2 \end{pmatrix} = \begin{pmatrix} (4)(2) + (4)(0) & (4)(1) + (4)(2) \\\ (0)(2) + (4)(0) & (0)(1) + (4)(2) \end{pmatrix} = \begin{pmatrix} 8 & 12 \\\ 0 & 8 \end{pmatrix}
 $$
 
 ---
@@ -62,9 +62,18 @@ $$
 ### **4. Pattern in Successive Powers of $A$**
 
 Observing the computed powers:
-* $A^1 = \begin{pmatrix} 2 & 1 \\\ 0 & 2 \end{pmatrix} = \begin{pmatrix} 2^1 & 1 \cdot 2^0 \\\ 0 & 2^1 \end{pmatrix}$
-* $A^2 = \begin{pmatrix} 4 & 4 \\\ 0 & 4 \end{pmatrix} = \begin{pmatrix} 2^2 & 2 \cdot 2^1 \\\ 0 & 2^2 \end{pmatrix}$
-* $A^3 = \begin{pmatrix} 8 & 12 \\\ 0 & 8 \end{pmatrix} = \begin{pmatrix} 2^3 & 3 \cdot 2^2 \\\ 0 & 2^3 \end{pmatrix}$
+
+$$
+A^1 = \begin{pmatrix} 2 & 1 \\\ 0 & 2 \end{pmatrix} = \begin{pmatrix} 2^1 & 1 \cdot 2^0 \\\ 0 & 2^1 \end{pmatrix}
+$$
+
+$$
+A^2 = \begin{pmatrix} 4 & 4 \\\ 0 & 4 \end{pmatrix} = \begin{pmatrix} 2^2 & 2 \cdot 2^1 \\\ 0 & 2^2 \end{pmatrix}
+$$
+
+$$
+A^3 = \begin{pmatrix} 8 & 12 \\\ 0 & 8 \end{pmatrix} = \begin{pmatrix} 2^3 & 3 \cdot 2^2 \\\ 0 & 2^3 \end{pmatrix}
+$$
 
 In general, for any positive integer $n \ge 1$:
 
