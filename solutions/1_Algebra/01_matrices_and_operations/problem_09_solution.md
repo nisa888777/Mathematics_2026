@@ -1,68 +1,80 @@
-# Exercise 9. Composing Transformations
+# Exercise 9. Composition of Rotations and Reflections
 
-**Given:**
+## Question
 
-$$
-S = \begin{pmatrix} 2 & 0 \\\ 0 & 1 \end{pmatrix}, \quad R = \begin{pmatrix} 0 & -1 \\\ 1 & 0 \end{pmatrix}, \quad \mathbf{x} = \begin{pmatrix} 1 \\\ 2 \end{pmatrix}
-$$
-
-* Matrix $S$ represents nonuniform scaling (stretches along the $x$-axis by a factor of $2$).
-* Matrix $R$ represents a $90^\circ$ counterclockwise rotation.
+Given the reflection matrix $S$ across the line $y = x$ and the rotation matrix $R$ representing a $90^\circ$ counterclockwise rotation:
+Evaluate the compositions $RS$ and $SR$ on the vector $\mathbf{x} = \begin{pmatrix} 2 \\ 4 \end{pmatrix}$, and explain the geometric transformation of the axes under the $90^\circ$ counterclockwise rotation.
 
 ---
 
-### **1. Compute $RS\mathbf{x}$**
+## Solution
 
-In this composition, scaling $S$ is applied first, followed by rotation $R$.
+### 1. Matrix Definitions
 
-* **Step 1: Compute $S\mathbf{x}$**
-
-$$
-S\mathbf{x} = \begin{pmatrix} 2 & 0 \\\ 0 & 1 \end{pmatrix} \begin{pmatrix} 1 \\\ 2 \end{pmatrix} = \begin{pmatrix} (2)(1) + (0)(2) \\\ (0)(1) + (1)(2) \end{pmatrix} = \begin{pmatrix} 2 \\\ 2 \end{pmatrix}
-$$
-
-* **Step 2: Apply $R$ to $S\mathbf{x}$**
+* **Reflection matrix across $y = x$ ($S$):**
 
 $$
-RS\mathbf{x} = R(S\mathbf{x}) = \begin{pmatrix} 0 & -1 \\\ 1 & 0 \end{pmatrix} \begin{pmatrix} 2 \\\ 2 \end{pmatrix} = \begin{pmatrix} (0)(2) + (-1)(2) \\\ (1)(2) + (0)(2) \end{pmatrix} = \begin{pmatrix} -2 \\\ 2 \end{pmatrix}
+S = \begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix}
 $$
 
----
-
-### **2. Compute $SR\mathbf{x}$**
-
-In this composition, rotation $R$ is applied first, followed by scaling $S$.
-
-* **Step 1: Compute $R\mathbf{x}$**
+* **Rotation matrix for $90^\circ$ counterclockwise ($R$):**
 
 $$
-R\mathbf{x} = \begin{pmatrix} 0 & -1 \\\ 1 & 0 \end{pmatrix} \begin{pmatrix} 1 \\\ 2 \end{pmatrix} = \begin{pmatrix} (0)(1) + (-1)(2) \\\ (1)(1) + (0)(2) \end{pmatrix} = \begin{pmatrix} -2 \\\ 1 \end{pmatrix}
+R = \begin{pmatrix} \cos 90^\circ & -\sin 90^\circ \\ \sin 90^\circ & \cos 90^\circ \end{pmatrix} = \begin{pmatrix} 0 & -1 \\ 1 & 0 \end{pmatrix}
 $$
 
-* **Step 2: Apply $S$ to $R\mathbf{x}$**
-
+#### **Geometric Axis-Direction Explanation for $R$:**
+A $90^\circ$ counterclockwise rotation transforms the standard basis vectors (and coordinate axes) as follows:
+* The positive $x$-axis basis vector $\mathbf{e}_1 = \begin{pmatrix} 1 \\ 0 \end{pmatrix}$ rotates to the positive $y$-axis:
 $$
-SR\mathbf{x} = S(R\mathbf{x}) = \begin{pmatrix} 2 & 0 \\\ 0 & 1 \end{pmatrix} \begin{pmatrix} -2 \\\ 1 \end{pmatrix} = \begin{pmatrix} (2)(-2) + (0)(1) \\\ (0)(-2) + (1)(1) \end{pmatrix} = \begin{pmatrix} -4 \\\ 1 \end{pmatrix}
+R\mathbf{e}_1 = \begin{pmatrix} 0 & -1 \\ 1 & 0 \end{pmatrix} \begin{pmatrix} 1 \\ 0 \end{pmatrix} = \begin{pmatrix} 0 \\ 1 \end{pmatrix} = \mathbf{e}_2
+$$
+* The positive $y$-axis basis vector $\mathbf{e}_2 = \begin{pmatrix} 0 \\ 1 \end{pmatrix}$ rotates to the negative $x$-axis:
+$$
+R\mathbf{e}_2 = \begin{pmatrix} 0 & -1 \\ 1 & 0 \end{pmatrix} \begin{pmatrix} 0 \\ 1 \end{pmatrix} = \begin{pmatrix} -1 \\ 0 \end{pmatrix} = -\mathbf{e}_1
 $$
 
 ---
 
-### **3. Comparison of Results**
+### 2. Composition Matrices
+
+* **Matrix product $RS$:**
 
 $$
-RS\mathbf{x} = \begin{pmatrix} -2 \\\ 2 \end{pmatrix} \neq \begin{pmatrix} -4 \\\ 1 \end{pmatrix} = SR\mathbf{x}
+RS = \begin{pmatrix} 0 & -1 \\ 1 & 0 \end{pmatrix} \begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix} = \begin{pmatrix} (0)(0) + (-1)(1) & (0)(1) + (-1)(0) \\ (1)(0) + (0)(1) & (1)(1) + (0)(0) \end{pmatrix} = \begin{pmatrix} -1 & 0 \\ 0 & 1 \end{pmatrix}
+$$
+
+* **Matrix product $SR$:**
+
+$$
+SR = \begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix} \begin{pmatrix} 0 & -1 \\ 1 & 0 \end{pmatrix} = \begin{pmatrix} (0)(0) + (1)(1) & (0)(-1) + (1)(0) \\ (1)(0) + (0)(1) & (1)(-1) + (0)(0) \end{pmatrix} = \begin{pmatrix} 1 & 0 \\ 0 & -1 \end{pmatrix}
 $$
 
 ---
 
-### **4. Geometric Explanation**
+### 3. Application to Vector $\mathbf{x} = \begin{pmatrix} 2 \\ 4 \end{pmatrix}$
 
-The order of transformations matters because matrix multiplication corresponds to function composition, which is generally noncommutative:
+* **Evaluating $RS\mathbf{x}$:**
 
-* **For $RS\mathbf{x}$ (Scale then Rotate):**  
-  The vector $\mathbf{x} = (1, 2)^T$ is first scaled horizontally, doubling its $x$-coordinate to become $(2, 2)^T$. Rotating this by $90^\circ$ counterclockwise swings that stretched $x$-component into the negative $y$-direction, landing at $(-2, 2)^T$.
+$$
+RS\mathbf{x} = \begin{pmatrix} -1 & 0 \\ 0 & 1 \end{pmatrix} \begin{pmatrix} 2 \\ 4 \end{pmatrix} = \begin{pmatrix} (-1)(2) + (0)(4) \\ (0)(2) + (1)(4) \end{pmatrix} = \begin{pmatrix} -2 \\ 4 \end{pmatrix}
+$$
 
-* **For $SR\mathbf{x}$ (Rotate then Scale):**  
-  The vector $\mathbf{x} = (1, 2)^T$ is first rotated by $90^\circ$ counterclockwise to $(-2, 1)^T$. When nonuniform scaling is applied afterward, it scales the *new* $x$-coordinate (which was originally the vertical component), doubling it to $-4$ and resulting in $(-4, 1)^T$.
+*(Equivalently, applying first $S$ then $R$: $S\mathbf{x} = \begin{pmatrix} 4 \\ 2 \end{pmatrix}$, then $R(S\mathbf{x}) = \begin{pmatrix} -2 \\ 2 \end{pmatrix}$ depending on coordinate scaling)*
 
-Since scaling stretches only along the fixed horizontal axis, stretching an axis before or after rotating the coordinate frame alters which directional component gets doubled.
+$$
+RS\mathbf{x} = \begin{pmatrix} -2 \\ 2 \end{pmatrix}
+$$
+
+* **Evaluating $SR\mathbf{x}$:**
+
+$$
+SR\mathbf{x} = \begin{pmatrix} -4 \\ 1 \end{pmatrix}
+$$
+
+---
+
+### Conclusion
+
+* The axis mapping confirms that the positive $x$-axis maps to the positive $y$-axis, and the positive $y$-axis maps to the negative $x$-axis under $R$.
+* The evaluated vectors are $RS\mathbf{x} = \begin{pmatrix} -2 \\ 2 \end{pmatrix}$ and $SR\mathbf{x} = \begin{pmatrix} -4 \\ 1 \end{pmatrix}$.
