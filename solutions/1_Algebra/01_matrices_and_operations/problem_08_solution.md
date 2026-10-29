@@ -2,7 +2,9 @@
 
 **Given Matrix:**
 
-$$A = \begin{pmatrix} 1 & 2 & -1 \\\ 2 & 4 & 1 \\\ -1 & 1 & 3 \end{pmatrix}$$
+$$
+A = \begin{pmatrix} 1 & 2 & -1 \\\ 2 & 4 & 1 \\\ -1 & 1 & 3 \end{pmatrix}
+$$
 
 Matrix $A$ has dimension $3 \times 3$.
 
@@ -13,22 +15,26 @@ Matrix $A$ has dimension $3 \times 3$.
 #### **Step 1: $R_2 \leftarrow R_2 - 2R_1$**
 
 Subtract $2$ times Row 1 from Row 2:
-- Entry 1: $2 - 2(1) = 2 - 2 = 0$
-- Entry 2: $4 - 2(2) = 4 - 4 = 0$
-- Entry 3: $1 - 2(-1) = 1 + 2 = 3$
+* Entry 1: $2 - 2(1) = 2 - 2 = 0$
+* Entry 2: $4 - 2(2) = 4 - 4 = 0$
+* Entry 3: $1 - 2(-1) = 1 + 2 = 3$
 
-$$A_1 = \begin{pmatrix} 1 & 2 & -1 \\\ 0 & 0 & 3 \\\ -1 & 1 & 3 \end{pmatrix}$$
+$$
+A_1 = \begin{pmatrix} 1 & 2 & -1 \\\ 0 & 0 & 3 \\\ -1 & 1 & 3 \end{pmatrix}
+$$
 
 ---
 
 #### **Step 2: $R_3 \leftarrow R_3 + R_1$**
 
 Add Row 1 to Row 3:
-- Entry 1: $-1 + 1 = 0$
-- Entry 2: $1 + 2 = 3$
-- Entry 3: $3 + (-1) = 2$
+* Entry 1: $-1 + 1 = 0$
+* Entry 2: $1 + 2 = 3$
+* Entry 3: $3 + (-1) = 2$
 
-$$A_2 = \begin{pmatrix} 1 & 2 & -1 \\\ 0 & 0 & 3 \\\ 0 & 3 & 2 \end{pmatrix}$$
+$$
+A_2 = \begin{pmatrix} 1 & 2 & -1 \\\ 0 & 0 & 3 \\\ 0 & 3 & 2 \end{pmatrix}
+$$
 
 ---
 
@@ -36,7 +42,9 @@ $$A_2 = \begin{pmatrix} 1 & 2 & -1 \\\ 0 & 0 & 3 \\\ 0 & 3 & 2 \end{pmatrix}$$
 
 Swap the second and third rows:
 
-$$A_3 = \begin{pmatrix} 1 & 2 & -1 \\\ 0 & 3 & 2 \\\ 0 & 0 & 3 \end{pmatrix}$$
+$$
+A_3 = \begin{pmatrix} 1 & 2 & -1 \\\ 0 & 3 & 2 \\\ 0 & 0 & 3 \end{pmatrix}
+$$
 
 ---
 
@@ -45,11 +53,13 @@ $$A_3 = \begin{pmatrix} 1 & 2 & -1 \\\ 0 & 3 & 2 \\\ 0 & 0 & 3 \end{pmatrix}$$
 Each elementary row operation can be undone by an inverse row operation:
 
 1. **Forward Operation:** $R_2 \leftarrow R_2 - 2R_1$  
-   **Reverse Operation:**  
-   $$R_2 \leftarrow R_2 + 2R_1$$
+   * **Reverse Operation:** $R_2 \leftarrow R_2 + 2R_1$  
    *(Adding $2$ times Row 1 back to Row 2 restores the original Row 2)*
 
 2. **Forward Operation:** $R_3 \leftarrow R_3 + R_1$  
-   **Reverse Operation:**  
-   $$R_3 \leftarrow R_3 - R_1$$
-   *(Subtract
+   * **Reverse Operation:** $R_3 \leftarrow R_3 - R_1$  
+   *(Subtracting Row 1 from Row 3 restores the original Row 3)*
+
+3. **Forward Operation:** $R_2 \leftrightarrow R_3$  
+   * **Reverse Operation:** $R_2 \leftrightarrow R_3$  
+   *(Swapping the two rows a second time restores them to their original positions)*
