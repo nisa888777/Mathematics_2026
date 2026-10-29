@@ -10,6 +10,7 @@
 
 ### **Dimension Compatibility Condition**
 The matrix product $XY$ is defined if and only if the number of columns in the first matrix ($X$) equals the number of rows in the second matrix ($Y$):
+
 $$
 (m \times k) \cdot (k \times n) \implies (m \times n)
 $$
