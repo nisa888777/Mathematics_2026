@@ -14,7 +14,7 @@ Matrix $A$ has dimension $3 \times 3$.
 
 #### **Step 1: $R_2 \leftarrow R_2 - 2R_1$**
 
-Subtract $2$ times Row 1 from Row 2:
+Subtract 2 times Row 1 from Row 2:
 * Entry 1: $2 - 2(1) = 2 - 2 = 0$
 * Entry 2: $4 - 2(2) = 4 - 4 = 0$
 * Entry 3: $1 - 2(-1) = 1 + 2 = 3$
@@ -54,7 +54,7 @@ Each elementary row operation can be undone by an inverse row operation:
 
 1. **Forward Operation:** $R_2 \leftarrow R_2 - 2R_1$  
    * **Reverse Operation:** $R_2 \leftarrow R_2 + 2R_1$  
-   *(Adding $2$ times Row 1 back to Row 2 restores the original Row 2)*
+   *(Adding 2 times Row 1 back to Row 2 restores the original Row 2)*
 
 2. **Forward Operation:** $R_3 \leftarrow R_3 + R_1$  
    * **Reverse Operation:** $R_3 \leftarrow R_3 - R_1$  
