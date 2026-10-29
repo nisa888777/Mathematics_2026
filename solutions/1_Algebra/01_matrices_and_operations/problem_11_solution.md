@@ -75,4 +75,10 @@ $$
 B = a \begin{pmatrix} 1 & 0 \\\ 0 & 1 \end{pmatrix} + b \begin{pmatrix} 0 & 1 \\\ 0 & 0 \end{pmatrix} = a I + b N
 $$
 
-where $I$ is the identity matrix and $N = \begin{pmatrix} 0 & 1 \\\ 0 & 0 \end{pmatrix} = A - I$ is a strictly upper triangular nilpotent matrix.
+where $I$ is the identity matrix and:
+
+$$
+N = \begin{pmatrix} 0 & 1 \\\ 0 & 0 \end{pmatrix} = A - I
+$$
+
+is a strictly upper triangular nilpotent matrix.
