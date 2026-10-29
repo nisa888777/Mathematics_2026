@@ -76,7 +76,7 @@ $$
 
 ---
 
-### **3. Compute $F \begin{pmatrix} a \\\ b \end{pmatrix}$ and Explanation**
+### **3. Compute $F(a, b)^T$ and Explanation**
 
 * **Matrix-Vector Multiplication:**
 
