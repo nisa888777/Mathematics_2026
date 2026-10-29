@@ -59,10 +59,26 @@ $$
 AB = \begin{pmatrix} -1 & 2 \\\ 2 & 1 \end{pmatrix} = \begin{pmatrix} A\mathbf{b}_1 & A\mathbf{b}_2 \end{pmatrix}
 $$
 
-The first column of $AB$ is exactly $A\mathbf{b}_1 = \begin{pmatrix} -1 \\\ 2 \end{pmatrix}$, and the second column of $AB$ is exactly $A\mathbf{b}_2 = \begin{pmatrix} 2 \\\ 1 \end{pmatrix}$.
+The first column of $AB$ is:
 
-**Explanation:**
-By the definition of matrix multiplication partitioned by columns, multiplying a matrix $A$ by a matrix $B = \begin{pmatrix} \mathbf{b}_1 & \mathbf{b}_2 & \cdots & \mathbf{b}_k \end{pmatrix}$ applies $A$ independently to each column of $B$:
+$$
+A\mathbf{b}_1 = \begin{pmatrix} -1 \\\ 2 \end{pmatrix}
+$$
+
+The second column of $AB$ is:
+
+$$
+A\mathbf{b}_2 = \begin{pmatrix} 2 \\\ 1 \end{pmatrix}
+$$
+
+**Explanation:**  
+By the definition of matrix multiplication partitioned by columns, multiplying a matrix $A$ by a matrix partitioned into columns:
+
+$$
+B = \begin{pmatrix} \mathbf{b}_1 & \mathbf{b}_2 \end{pmatrix}
+$$
+
+applies $A$ independently to each column:
 
 $$
 AB = A \begin{pmatrix} \mathbf{b}_1 & \mathbf{b}_2 \end{pmatrix} = \begin{pmatrix} A\mathbf{b}_1 & A\mathbf{b}_2 \end{pmatrix}
