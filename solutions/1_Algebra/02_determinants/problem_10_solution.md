@@ -74,7 +74,7 @@ $$
 The linear dependence of the rows directly implies that matrix $A$ is **not invertible** (singular) for the following reasons:
 
 * **Rank and Dimension:**  
-  Because row 2 provides no independent dimension, the row space has dimension $\operatorname{rank}(A) \le 2 < 3$. For a $3 \times 3$ matrix to be invertible, it must have full rank ($\operatorname{rank}(A) = 3$).
+  Because row 2 is a scalar multiple of row 1, it provides no independent dimension. Thus, the rank of the matrix satisfies $\text{rank}(A) \le 2 < 3$. For a $3 \times 3$ matrix to be invertible, it must have full rank ($\text{rank}(A) = 3$).
 * **Kernel / Null Space:**  
   A rank deficiency means there exist non-zero vectors $\mathbf{x} \neq \mathbf{0}$ such that $A\mathbf{x} = \mathbf{0}$. Therefore, the linear transformation is not injective (one-to-one).
 * **Invertibility Theorem:**  
@@ -86,4 +86,4 @@ The linear dependence of the rows directly implies that matrix $A$ is **not inve
 
 * **Specific Row Dependence:** Row 2 is exactly twice row 1 ($\mathbf{r}_2 = 2\mathbf{r}_1$).
 * **Determinant:** $\det(A) = 0$ without a full calculation, because two rows are proportional.
-* **Noninvertibility:** Because the rows are linearly dependent, the matrix has $\operatorname{rank}(A) < 3$ and $\det(A) = 0$, making the matrix singular (noninvertible).
+* **Noninvertibility:** Because the rows are linearly dependent, the matrix has $\text{rank}(A) < 3$ and $\det(A) = 0$, making the matrix singular (noninvertible).
