@@ -68,13 +68,12 @@ $$
 \det(A^k) = (\det(A))^k
 $$
 
-### Conclusion
+* **Calculation:**  
+  For $k = 2$:
 
-* $\det(2A) = -32$ (using scalar scaling property where $c = 2$ and $n = 3$)
-* $\det(A^T) = -4$ (using the transpose property where determinant remains unchanged)
-* $\det(A^2) = 16$ (using the multiplicative power property)
-* $\det(-A) = 4$ (using negation property for odd dimensions where factor is $(-1)^3$)
-
+$$
+\det(A^2) = (\det(A))^2 = (-4)^2 = 16
+$$
 
 ---
 
