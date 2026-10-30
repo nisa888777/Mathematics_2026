@@ -39,7 +39,7 @@ $$
 ### 2. Computation of $\det(A^T)$
 
 * **Property (Transpose):**  
-  The determinant of a matrix is equal to the determinant of its transpose, because taking the transpose interchanges rows and columns without changing the values of the terms in the determinant expansion:
+  The determinant of a matrix is equal to the determinant of its transpose, because transposition interchanges rows and columns without changing the determinant expansion:
 
 $$
 \det(A^T) = \det(A)
@@ -56,7 +56,13 @@ $$
 ### 3. Computation of $\det(A^2)$
 
 * **Property (Multiplicative Property):**  
-  The determinant of the product of two square matrices is the product of their determinants ($\det(AB) = \det(A)\det(B)$). Consequently, for any positive integer power:
+  The determinant of the product of two square matrices is the product of their individual determinants:
+
+$$
+\det(AB) = \det(A) \cdot \det(B)
+$$
+
+Consequently, for any positive integer power $k$:
 
 $$
 \det(A^k) = (\det(A))^k
@@ -74,7 +80,7 @@ $$
 ### 4. Computation of $\det(-A)$
 
 * **Property (Negation of an Odd-Dimensional Matrix):**  
-  Negating a matrix corresponds to multiplying it by the scalar $c = -1$. Applying the scalar multiplication rule $\det(cA) = c^n \det(A)$ with $n = 3$:
+  Negating a matrix corresponds to multiplying the matrix by the scalar $c = -1$. Applying the scalar multiplication rule with $n = 3$:
 
 $$
 \det(-A) = (-1)^n \det(A) = (-1)^3 \det(A) = -\det(A)
@@ -90,7 +96,7 @@ $$
 
 ### Conclusion
 
-* $\det(2A) = -32$ (using $\det(cA) = c^n \det(A)$ with $n = 3$)
-* $\det(A^T) = -4$ (using $\det(A^T) = \det(A)$)
-* $\det(A^2) = 16$ (using $\det(A^2) = (\det(A))^2$)
-* $\det(-A) = 4$ (using $\det(-A) = (-1)^3 \det(A)$)
+* $\det(2A) = -32$ (using scalar scaling $\det(cA) = c^n \det(A)$ with $n = 3$)
+* $\det(A^T) = -4$ (using the transpose property $\det(A^T) = \det(A)$)
+* $\det(A^2) = 16$ (using the power property $\det(A^2) = (\det(A))^2$)
+* $\det(-A) = 4$ (using sign inversion for odd dimension $\det(-A) = -\det(A)$)
