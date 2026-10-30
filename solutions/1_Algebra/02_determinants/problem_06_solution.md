@@ -61,20 +61,23 @@ Thus, the matrix is not invertible when $t = \sqrt{2}$ or $t = -\sqrt{2}$.
 The relationship between invertibility and the determinant being zero can be understood geometrically and algebraically:
 
 * **Algebraic perspective:**  
-  The inverse of a $2 \times 2$ matrix $M = \begin{pmatrix} a & b \\\ c & d \end{pmatrix}$ is given by:
+  The inverse of a $2 \times 2$ matrix $M$:
+
+$$
+M = \begin{pmatrix} a & b \\\ c & d \end{pmatrix}
+$$
+
+  is given by:
 
 $$
 M^{-1} = \frac{1}{\det(M)} \begin{pmatrix} d & -b \\\ -c & a \end{pmatrix}
 $$
 
-When $\det(A(t)) = 0$, computing $A(t)^{-1}$ would require dividing by zero, which is undefined. Therefore, the matrix cannot have an inverse.
+  When $\det(A(t)) = 0$, computing $A(t)^{-1}$ would require dividing by zero, which is undefined. Therefore, the matrix cannot have an inverse.
 
 * **Linear dependence:**  
   When $t = \pm\sqrt{2}$, the rows (and columns) of $A(t)$ become linearly dependent:
-  * For $t = \sqrt{2}$, row 2 is $\sqrt{2}$ times row 1:
-    $$
-    \sqrt{2} \cdot (\sqrt{2}, 1) = (2, \sqrt{2})
-    $$
+  * For $t = \sqrt{2}$, row 2 is a scalar multiple of row 1: $\sqrt{2} \cdot (\sqrt{2}, 1) = (2, \sqrt{2})$.
   * Linearly dependent rows mean the transformation collapses the 2D plane into a 1D line (area scale factor $= 0$), which cannot be inverted.
 
 ---
