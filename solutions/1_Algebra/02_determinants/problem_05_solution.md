@@ -25,19 +25,21 @@ To compute $\det(A)$, we reduce matrix $A$ to an upper triangular form using ele
 
 We use the pivot $a_{11} = 1$ in row 1:
 
-1. **Operation $R_2 \to R_2 - 2R_1$:**  
-   * **Effect on determinant:** Adding a multiple of row 1 to row 2 does not change the value of the determinant.
-   * New row 2:
-     $$
-     (2, 1, 0) - 2(1, 2, 3) = (2 - 2, \, 1 - 4, \, 0 - 6) = (0, -3, -6)
-     $$
+**1. Operation $R_2 \to R_2 - 2R_1$:**
+* **Effect on determinant:** Adding a multiple of row 1 to row 2 does not change the value of the determinant.
+* **Calculation:**
 
-2. **Operation $R_3 \to R_3 + R_1$:**  
-   * **Effect on determinant:** Adding row 1 to row 3 does not change the value of the determinant.
-   * New row 3:
-     $$
-     (-1, 4, 2) + (1, 2, 3) = (-1 + 1, \, 4 + 2, \, 2 + 3) = (0, 6, 5)
-     $$
+$$
+(2, 1, 0) - 2(1, 2, 3) = (2 - 2, \, 1 - 4, \, 0 - 6) = (0, -3, -6)
+$$
+
+**2. Operation $R_3 \to R_3 + R_1$:**
+* **Effect on determinant:** Adding row 1 to row 3 does not change the value of the determinant.
+* **Calculation:**
+
+$$
+(-1, 4, 2) + (1, 2, 3) = (-1 + 1, \, 4 + 2, \, 2 + 3) = (0, 6, 5)
+$$
 
 After these operations, the determinant satisfies:
 
@@ -51,12 +53,13 @@ $$
 
 We use the pivot in row 2 to eliminate the entry in row 3 ($a_{32} = 6$):
 
-* **Operation $R_3 \to R_3 + 2R_2$:**  
-  * **Effect on determinant:** Adding a multiple of row 2 to row 3 does not change the value of the determinant.
-  * New row 3:
-    $$
-    (0, 6, 5) + 2(0, -3, -6) = (0 + 0, \, 6 - 6, \, 5 - 12) = (0, 0, -7)
-    $$
+**Operation $R_3 \to R_3 + 2R_2$:**
+* **Effect on determinant:** Adding a multiple of row 2 to row 3 does not change the value of the determinant.
+* **Calculation:**
+
+$$
+(0, 6, 5) + 2(0, -3, -6) = (0 + 0, \, 6 - 6, \, 5 - 12) = (0, 0, -7)
+$$
 
 The matrix is now in upper triangular form $U$:
 
