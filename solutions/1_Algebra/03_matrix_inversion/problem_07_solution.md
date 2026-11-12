@@ -14,7 +14,7 @@ compute $(AB)^{-1}$ and $B^{-1}A^{-1}$. Check that the results are the same and 
 
 ## Solution
 
-We are given two $2 \times 2$ invertible matrices[span_1](start_span)[span_1](end_span):
+We are given two $2 \times 2$ invertible matrices:
 
 $$
 A = \begin{pmatrix} 1 & 1 \\\ 0 & 1 \end{pmatrix}, \qquad B = \begin{pmatrix} 2 & 0 \\\ 0 & 3 \end{pmatrix}
@@ -24,7 +24,7 @@ $$
 
 ### 1. Compute $(AB)^{-1}$
 
-First, we compute the matrix product $AB$[span_2](start_span)[span_2](end_span):
+First, we compute the matrix product $AB$:
 
 $$
 AB = \begin{pmatrix} 1 & 1 \\\ 0 & 1 \end{pmatrix} \begin{pmatrix} 2 & 0 \\\ 0 & 3 \end{pmatrix} = \begin{pmatrix} (1)(2) + (1)(0) & (1)(0) + (1)(3) \\\ (0)(2) + (1)(0) & (0)(0) + (1)(3) \end{pmatrix} = \begin{pmatrix} 2 & 3 \\\ 0 & 3 \end{pmatrix}
