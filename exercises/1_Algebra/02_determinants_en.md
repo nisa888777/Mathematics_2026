@@ -20,7 +20,7 @@ State the determinant properties you use in order and explain why the factors in
 
 ## Solution
 
-We are given two invertible $2 \times 2$ matrices $A$ and $B$ with $\det(A) = -2$ and $\det(B) = 3$[span_1](start_span)[span_1](end_span). We evaluate $\det(B^{-1} A^T B)$ step by step using fundamental properties of determinants[span_2](start_span)[span_2](end_span).
+We are given two invertible $2 \times 2$ matrices $A$ and $B$ with $\det(A) = -2$ and $\det(B) = 3$. We evaluate $\det(B^{-1} A^T B)$ step by step using fundamental properties of determinants.
 
 ---
 
@@ -68,7 +68,7 @@ $$
 ### Step 3: Why the Factors Involving $B$ Cancel and Final Calculation
 
 * **Explanation of Cancellation:**  
-  Because determinants are ordinary real numbers (scalars), multiplication is commutative. Furthermore, since $B$ is invertible, $\det(B) = 3 \neq 0$, meaning $\det(B^{-1}) = \frac{1}{\det(B)}$ is well-defined and non-zero[span_3](start_span)[span_3](end_span). Therefore, the scalar factor $\frac{1}{\det(B)}$ and $\det(B)$ are multiplicative inverses in $\mathbb{R}$ and cancel out directly:
+  Because determinants are ordinary real numbers (scalars), multiplication is commutative. Furthermore, since $B$ is invertible, $\det(B) = 3 \neq 0$, meaning $\det(B^{-1}) = \frac{1}{\det(B)}$ is well-defined and non-zero. Therefore, the scalar factor $\frac{1}{\det(B)}$ and $\det(B)$ are multiplicative inverses in $\mathbb{R}$ and cancel out directly:
 
 $$
 \frac{1}{\det(B)} \cdot \det(B) = \frac{1}{3} \cdot 3 = 1
@@ -77,7 +77,7 @@ $$
   (Geometrically and algebraically, conjugation $B^{-1} M B$ represents the same linear transformation $M$ expressed in a different basis, which preserves the volume scaling factor $\det(M)$.)
 
 * **Final Numerical Substitution:**  
-  Substituting $\det(A) = -2$ and $\det(B) = 3$[span_4](start_span)[span_4](end_span):
+  Substituting $\det(A) = -2$ and $\det(B) = 3$:
 
 $$
 \det\left(B^{-1} A^T B\right) = \frac{1}{3} \cdot (-2) \cdot 3 = -2
@@ -91,7 +91,7 @@ $$
   1. **Product rule:** $\det(B^{-1} A^T B) = \det(B^{-1})\det(A^T)\det(B)$
   2. **Inverse rule:** $\det(B^{-1}) = \frac{1}{\det(B)}$
   3. **Transpose rule:** $\det(A^T) = \det(A)$
-* **Why $B$ Cancels:** Since determinants are non-zero real numbers for invertible matrices, $\det(B^{-1}) = \frac{1}{\det(B)}$ and $\det(B)$ are reciprocal scalars whose product equals $1$[span_5](start_span)[span_5](end_span).
+* **Why $B$ Cancels:** Since determinants are non-zero real numbers for invertible matrices, $\det(B^{-1}) = \frac{1}{\det(B)}$ and $\det(B)$ are reciprocal scalars whose product equals $1$.
 * **Final Value:**
 
 $$
