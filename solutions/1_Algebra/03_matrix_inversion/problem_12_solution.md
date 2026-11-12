@@ -32,7 +32,7 @@ $$
 (cA)^{-1} = \frac{1}{c} A^{-1}
 $$
 
-*(Justification: $(cA)\left(\frac{1}{c} A^{-1}\right) = \left(c \cdot \frac{1}{c}\right)(A A^{-1}) = 1 \cdot I = I$.)*
+Justification: $(cA)\left(\frac{1}{c} A^{-1}\right) = \left(c \cdot \frac{1}{c}\right)(A A^{-1}) = 1 \cdot I = I$.
 
 Applying this property with $c = 3$:
 
@@ -50,7 +50,7 @@ $$
 (A^T)^{-1} = (A^{-1})^T
 $$
 
-*(Justification: Taking the transpose of $A A^{-1} = I$ yields $(A A^{-1})^T = I^T \implies (A^{-1})^T A^T = I$.)*
+Justification: Taking the transpose of $A A^{-1} = I$ yields $(A A^{-1})^T = I^T \implies (A^{-1})^T A^T = I$.
 
 Taking the transpose of the given $A^{-1}$:
 
@@ -68,7 +68,7 @@ $$
 (A^2)^{-1} = (A \cdot A)^{-1} = A^{-1} A^{-1} = (A^{-1})^2
 $$
 
-*(Justification: $A^2 (A^{-1})^2 = A(A A^{-1})A^{-1} = A I A^{-1} = A A^{-1} = I$.)*
+Justification: $A^2 (A^{-1})^2 = A(A A^{-1})A^{-1} = A I A^{-1} = A A^{-1} = I$.
 
 Multiplying $A^{-1}$ by itself:
 
@@ -82,6 +82,21 @@ $$
 
 Using inverse properties directly from $A^{-1}$ without computing $A$:
 
-* $(3A)^{-1} = \frac{1}{3}A^{-1} = \begin{pmatrix} \frac{2}{3} & -\frac{1}{3} \\\ -1 & \frac{2}{3} \end{pmatrix}$
-* $(A^T)^{-1} = (A^{-1})^T = \begin{pmatrix} 2 & -3 \\\ -1 & 2 \end{pmatrix}$
-* $(A^2)^{-1} = (A^{-1})^2 = \begin{pmatrix} 7 & -4 \\\ -12 & 7 \end{pmatrix}$
+* Scalar multiple inverse:
+
+$$
+(3A)^{-1} = \frac{1}{3}A^{-1} = \begin{pmatrix} \frac{2}{3} & -\frac{1}{3} \\\ -1 & \frac{2}{3} \end{pmatrix}
+$$
+
+* Transpose inverse:
+
+$$
+(A^T)^{-1} = (A^{-1})^T = \begin{pmatrix} 2 & -3 \\\ -1 & 2 \end{pmatrix}
+$$
+
+* Square inverse:
+
+$$
+(A^2)^{-1} = (A^{-1})^2 = \begin{pmatrix} 7 & -4 \\\ -12 & 7 \end{pmatrix}
+$$
+
