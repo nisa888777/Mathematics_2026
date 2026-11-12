@@ -1,6 +1,20 @@
-# Exercise 2. Determinant of a 3x3 Matrix
+# Exercise 2. Determinant of a 3×3 Matrix
 
-**Given Matrix:**
+## Question
+
+For
+
+$$
+A = \begin{pmatrix} 1 & 2 & -1 \\\ 0 & 3 & 4 \\\ 2 & 1 & 5 \end{pmatrix}
+$$
+
+compute $\det A$ using Sarrus' rule. Then perform one simple check using a chosen property of the determinant.
+
+---
+
+## Solution
+
+We are given the $3 \times 3$ matrix[span_2](start_span)[span_2](end_span):
 
 $$
 A = \begin{pmatrix} 1 & 2 & -1 \\\ 0 & 3 & 4 \\\ 2 & 1 & 5 \end{pmatrix}
@@ -8,80 +22,70 @@ $$
 
 ---
 
-### **1. Compute $\det(A)$ Using Sarrus' Rule**
+### 1. Computing $\det(A)$ Using Sarrus' Rule
 
-To apply Sarrus' rule, append the first two columns to the right of the matrix:
+To apply Sarrus' rule, we repeat the first two columns to the right of the matrix[span_3](start_span)[span_3](end_span):
 
 $$
-\begin{matrix}
-1 & 2 & -1 & 1 & 2 \\\
-0 & 3 & 4 & 0 & 3 \\\
+\begin{array}{ccc|cc}
+1 & 2 & -1 & 1 & 2 \\
+0 & 3 & 4 & 0 & 3 \\
 2 & 1 & 5 & 2 & 1
-\end{matrix}
+\end{array}
 $$
 
-* **Sum of the products along the main diagonals (top-left to bottom-right):**
+* **Sum of the downward (main) diagonals:**
 
 $$
-D_1 = (1)(3)(5) + (2)(4)(2) + (-1)(0)(1)
+(1)(3)(5) + (2)(4)(2) + (-1)(0)(1) = 15 + 16 + 0 = 31
 $$
 
-$$
-D_1 = 15 + 16 + 0 = 31
-$$
-
-* **Sum of the products along the anti-diagonals (bottom-left to top-right):**
+* **Sum of the upward (anti-) diagonals:**
 
 $$
-D_2 = (2)(3)(-1) + (1)(4)(1) + (5)(0)(2)
-$$
-
-$$
-D_2 = -6 + 4 + 0 = -2
+(2)(3)(-1) + (1)(4)(1) + (5)(0)(2) = -6 + 4 + 0 = -2
 $$
 
 * **Determinant calculation:**
 
 $$
-\det(A) = D_1 - D_2 = 31 - (-2) = 31 + 2 = 33
+\det(A) = 31 - (-2) = 31 + 2 = 33
 $$
 
 ---
 
-### **2. Verification Using Determinant Properties (Cofactor Expansion)**
+### 2. Simple Check Using a Determinant Property
 
-We can check the result by expanding along the first column, which contains a zero to simplify calculation:
+We verify the result using the **row operation invariance property**[span_4](start_span)[span_4](end_span): adding a scalar multiple of one row to another row does not change the determinant ($R_3 \to R_3 - 2R_1$).
 
-$$
-\det(A) = a_{11} C_{11} + a_{21} C_{21} + a_{31} C_{31}
-$$
+* **Perform $R_3 \to R_3 - 2R_1$:**
 
 $$
-\det(A) = 1 \cdot \det\begin{pmatrix} 3 & 4 \\\ 1 & 5 \end{pmatrix} - 0 \cdot \det\begin{pmatrix} 2 & -1 \\\ 1 & 5 \end{pmatrix} + 2 \cdot \det\begin{pmatrix} 2 & -1 \\\ 3 & 4 \end{pmatrix}
+(2, 1, 5) - 2(1, 2, -1) = (2 - 2, \, 1 - 4, \, 5 - (-2)) = (0, -3, 7)
 $$
 
-Evaluating the $2 \times 2$ determinants:
-
-* **First minor:**
+The transformed matrix is:
 
 $$
-\det\begin{pmatrix} 3 & 4 \\\ 1 & 5 \end{pmatrix} = (3)(5) - (4)(1) = 15 - 4 = 11
+\tilde{A} = \begin{pmatrix} 1 & 2 & -1 \\\ 0 & 3 & 4 \\\ 0 & -3 & 7 \end{pmatrix}
 $$
 
-* **Second minor:**
+* **Expand along the first column** (which now has two zeros):
 
 $$
-\det\begin{pmatrix} 2 & -1 \\\ 3 & 4 \end{pmatrix} = (2)(4) - (-1)(3) = 8 - (-3) = 11
+\det(A) = \det(\tilde{A}) = 1 \cdot \det \begin{pmatrix} 3 & 4 \\\ -3 & 7 \end{pmatrix} = (3)(7) - (4)(-3) = 21 - (-12) = 33
 $$
 
-Substituting these back into the expansion:
+Both methods yield $\det(A) = 33$, confirming the calculation[span_5](start_span)[span_5](end_span).
 
-$$
-\det(A) = 1(11) - 0 + 2(11) = 11 + 22 = 33
-$$
+---
 
-Both methods confirm that:
+### Conclusion
+
+* **Determinant via Sarrus' rule:**
 
 $$
 \det(A) = 33
 $$
+
+* **Verification:** Applying the row operation $R_3 \to R_3 - 2R_1$ preserves the determinant and confirms $\det(A) = 33$[span_6](start_span)[span_6](end_span).
