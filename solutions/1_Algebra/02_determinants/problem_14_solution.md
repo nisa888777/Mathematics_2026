@@ -14,7 +14,7 @@ For which values of $k$ does the system have exactly one solution for every $b$?
 
 ## Solution
 
-We are analyzing the linear system $Ax = b$, where the coefficient matrix is[span_1](start_span)[span_1](end_span):
+We are analyzing the linear system $Ax = b$, where the coefficient matrix is:
 
 $$
 A = \begin{pmatrix} 1 & 2 \\\ k & 4 \end{pmatrix}
@@ -38,7 +38,7 @@ $$
 4 - 2k \neq 0 \implies 2k \neq 4 \implies k \neq 2
 $$
 
-Thus, for all $k \in \mathbb{R} \setminus \{2\}$ (i.e., **$k \neq 2$**), the matrix $A$ is invertible and the system $Ax = b$ has a unique solution $x = A^{-1}b$ for every $b$.
+Thus, for all $k \neq 2$, the matrix $A$ is invertible and the system $Ax = b$ has a unique solution $x = A^{-1}b$ for every $b$.
 
 ---
 
@@ -50,7 +50,7 @@ $$
 A = \begin{pmatrix} 1 & 2 \\\ 2 & 4 \end{pmatrix}
 $$
 
-Writing out the system $Ax = b$ for $x = \begin{pmatrix} x_1 \\\ x_2 \end{pmatrix}$ and $b = \begin{pmatrix} b_1 \\\ b_2 \end{pmatrix}$ gives:
+Writing out the system $Ax = b$ with unknown vector $x = (x_1, x_2)^T$ and right-hand side $b = (b_1, b_2)^T$ gives:
 
 $$
 \begin{cases}
@@ -84,5 +84,14 @@ $$
 ### Conclusion
 
 * **Unique solution for every $b$:** Occurs for all **$k \neq 2$**.
-* **Infinitely many solutions (at $k = 2$):** Example $b = \begin{pmatrix} 3 \\\ 6 \end{pmatrix}$ (consistent dependent equations).
-* **No solution (at $k = 2$):** Example $b = \begin{pmatrix} 3 \\\ 5 \end{pmatrix}$ (inconsistent parallel equations).
+* **Infinitely many solutions (at $k = 2$):** Example
+
+$$
+b = \begin{pmatrix} 3 \\\ 6 \end{pmatrix}
+$$
+
+* **No solution (at $k = 2$):** Example
+
+$$
+b = \begin{pmatrix} 3 \\\ 5 \end{pmatrix}
+$$
