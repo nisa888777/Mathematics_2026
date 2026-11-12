@@ -14,7 +14,7 @@ using elimination. Record the effect of every row operation used on the value of
 
 ## Solution
 
-We reduce matrix $A$ to an upper triangular form using Gaussian elimination while tracking the effect of each row operation on the determinant[span_1](start_span)[span_1](end_span).
+We reduce matrix $A$ to an upper triangular form using Gaussian elimination while tracking the effect of each row operation on the determinant.
 
 * **Rule on Row Operations:**  
   Adding a scalar multiple of one row to another row ($R_i \to R_i + c R_j$, $i \neq j$) **does not change** the value of the determinant.
