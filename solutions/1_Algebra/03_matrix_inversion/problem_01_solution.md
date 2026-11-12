@@ -26,7 +26,12 @@ $$
 AB = BA = I
 $$
 
-where $I = \begin{pmatrix} 1 & 0 \\\ 0 & 1 \end{pmatrix}$ is the $2 \times 2$ identity matrix.
+where $I$ is the $2 \times 2$ identity matrix:
+
+$$
+I = \begin{pmatrix} 1 & 0 \\\ 0 & 1 \end{pmatrix}
+$$
+
 
 ---
 
