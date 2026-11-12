@@ -20,7 +20,13 @@ $$
 A = \begin{pmatrix} 3 & 2 \\\ 5 & 4 \end{pmatrix}
 $$
 
-For a general $2 \times 2$ matrix $M = \begin{pmatrix} a & b \\\ c & d \end{pmatrix}$, the inverse exists if and only if $\det(M) = ad - bc \neq 0$, and is given by the formula:
+For a general $2 \times 2$ matrix
+
+$$
+M = \begin{pmatrix} a & b \\\ c & d \end{pmatrix}
+$$
+
+the inverse exists if and only if $\det(M) = ad - bc \neq 0$, and is given by the formula:
 
 $$
 M^{-1} = \frac{1}{ad - bc} \begin{pmatrix} d & -b \\\ -c & a \end{pmatrix}
@@ -76,4 +82,8 @@ Since the product yields the $2 \times 2$ identity matrix $I$, the computed inve
 ### Conclusion
 
 * The determinant is $\det(A) = 2$.
-* The inverse matrix is $A^{-1} = \begin{pmatrix} 2 & -1 \\\ -\frac{5}{2} & \frac{3}{2} \end{pmatrix}$.
+* The inverse matrix is:
+
+$$
+A^{-1} = \begin{pmatrix} 2 & -1 \\\ -\frac{5}{2} & \frac{3}{2} \end{pmatrix}
+$$
