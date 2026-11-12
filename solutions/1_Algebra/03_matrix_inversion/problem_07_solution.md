@@ -84,7 +84,7 @@ $$
 (AB)(B^{-1}A^{-1}) = A(B B^{-1})A^{-1} = A I A^{-1} = A A^{-1} = I
 $$
 
-* **Operational interpretation ("socks and shoes" principle):** Applying the product $AB$ to a vector $x$ means first applying transformation $B$, and then applying transformation $A$ to the result ($A(Bx)$). To undo this sequence and return to $x$, you must undo the last action first ($A^{-1}$) and then undo the first action ($B^{-1}$), resulting in $B^{-1}(A^{-1}y) = (B^{-1}A^{-1})y$.
+* **Operational interpretation ("socks and shoes" principle):** Applying the product $AB$ to a vector $x$ means first applying transformation $B$, and then applying transformation $A$ to the result $A(Bx)$. To undo this sequence and return to $x$, you must undo the last action first ($A^{-1}$) and then undo the first action ($B^{-1}$), resulting in $B^{-1}(A^{-1}y) = (B^{-1}A^{-1})y$.
 
 ---
 
