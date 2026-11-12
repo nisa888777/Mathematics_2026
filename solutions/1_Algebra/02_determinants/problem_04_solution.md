@@ -1,62 +1,62 @@
 # Exercise 4. Triangular Matrix
 
-**Given Matrix:**
+## Question
+
+Without expanding the determinant, compute
 
 $$
-A = \begin{pmatrix} 2 & 4 & 1 \\\ 0 & -3 & 5 \\\ 0 & 0 & 7 \end{pmatrix}
+\det \begin{pmatrix} 2 & 4 & 1 \\\ 0 & -3 & 5 \\\ 0 & 0 & 7 \end{pmatrix}.
 $$
 
-Matrix $A$ is an **upper triangular matrix** because all entries strictly below the main diagonal are equal to zero ($a_{ij} = 0$ for all $i > j$).
+State the rule for an arbitrary triangular matrix and explain it using this example.
 
 ---
 
-### **1. General Rule for Arbitrary Triangular Matrices**
+## Solution
 
-For any $n \times n$ triangular matrix $T$ (whether upper triangular, lower triangular, or diagonal), the determinant is simply the **product of its diagonal entries**:
-
-$$
-\det(T) = t_{11} \cdot t_{22} \cdots t_{nn} = \prod_{i=1}^n t_{ii}
-$$
-
----
-
-### **2. Computation Without Expanding**
-
-Applying this rule directly to matrix $A$:
+Let the given matrix be denoted as $U$:
 
 $$
-\det(A) = a_{11} \cdot a_{22} \cdot a_{33} = (2) \cdot (-3) \cdot (7)
-$$
-
-$$
-\det(A) = -42
+U = \begin{pmatrix} 2 & 4 & 1 \\\ 0 & -3 & 5 \\\ 0 & 0 & 7 \end{pmatrix}
 $$
 
 ---
 
-### **3. Explanation Using this Example**
+### 1. General Rule for an Arbitrary Triangular Matrix
 
-This property can be understood by considering what happens if we were to compute the determinant via cofactor expansion:
-
-1. **Expansion along the first column:**  
-   The first column contains only one non-zero entry, which is the diagonal element $a_{11} = 2$:
+* **Rule:**  
+  The determinant of any square upper triangular, lower triangular, or diagonal $n \times n$ matrix $T = [t_{ij}]$ is equal to the **product of its main diagonal entries**:
 
 $$
-\det(A) = 2 \cdot \det\begin{pmatrix} -3 & 5 \\\ 0 & 7 \end{pmatrix} - 0 + 0
+\det(T) = t_{11} \cdot t_{22} \cdots t_{nn} = \prod_{i=1}^{n} t_{ii}
 $$
 
-2. **Determinant of the remaining $2 \times 2$ submatrix:**  
-   The resulting $2 \times 2$ matrix is also upper triangular. Its determinant is again obtained by multiplying its diagonal elements:
+* **Why This Rule Holds:**  
+  In an upper triangular matrix, all entries strictly below the main diagonal are zero ($t_{ij} = 0$ for all $i > j$). When computing the determinant recursively along the first column at each step, only the diagonal entry has a non-zero contribution, leaving the next smaller triangular submatrix until only the product of the diagonal entries remains.
+
+---
+
+### 2. Application to the Given Example
+
+Observing the structure of matrix $U$:
+* All entries below the main diagonal are zero ($u_{21} = 0$, $u_{31} = 0$, $u_{32} = 0$), so $U$ is an **upper triangular matrix**.
+* Its main diagonal entries are $u_{11} = 2$, $u_{22} = -3$, and $u_{33} = 7$.
+
+Applying the triangular matrix rule directly without full cofactor expansion:
 
 $$
-\det\begin{pmatrix} -3 & 5 \\\ 0 & 7 \end{pmatrix} = (-3)(7) - (5)(0) = (-3)(7)
+\det(U) = (2) \cdot (-3) \cdot (7) = -42
 $$
 
-3. **Combined product:**  
-   Substituting this back into the expansion yields:
+Notice that the entries above the main diagonal ($4$, $1$, and $5$) do not affect the value of the determinant.
+
+---
+
+### Conclusion
+
+* **General Rule:** For any triangular matrix, $\det(T)$ equals the product of its main diagonal elements.
+* **Determinant Value:**
 
 $$
-\det(A) = (2) \cdot (-3) \cdot (7) = -42
+\det \begin{pmatrix} 2 & 4 & 1 \\\ 0 & -3 & 5 \\\ 0 & 0 & 7 \end{pmatrix} = -42
 $$
-
-Because all off-diagonal terms involving zeros vanish at each successive stage of expansion, only the product of the diagonal elements survives.
