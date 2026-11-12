@@ -52,9 +52,13 @@ $$
 A = \begin{pmatrix} 0 & 1 \\\ 1 & 0 \end{pmatrix}
 $$
 
-Clearly, $A \neq I = \begin{pmatrix} 1 & 0 \\\ 0 & 1 \end{pmatrix}$ and $A \neq -I = \begin{pmatrix} -1 & 0 \\\ 0 & -1 \end{pmatrix}$.
+Clearly, $A$ is different from both the identity matrix and its negative:
 
-*(Note: Geometrically, $A$ reflects points across the line $y = x$; applying the reflection twice returns every point to its original position.)*
+$$
+I = \begin{pmatrix} 1 & 0 \\\ 0 & 1 \end{pmatrix}, \qquad -I = \begin{pmatrix} -1 & 0 \\\ 0 & -1 \end{pmatrix}
+$$
+
+Note: Geometrically, $A$ reflects points across the line $y = x$; applying the reflection twice returns every point to its original position.
 
 ---
 
@@ -73,4 +77,10 @@ Since $A^2 = I$, we confirm that $A^{-1} = A$.
 ### Conclusion
 
 * Because $A \cdot A = I$ matches the definition of an inverse, any involutory matrix satisfying $A^2 = I$ is its own inverse ($A^{-1} = A$).
-* The matrix $A = \begin{pmatrix} 0 & 1 \\\ 1 & 0 \end{pmatrix}$ is distinct from $I$ and $-I$ and satisfies $A^2 = I$.
+* The matrix
+
+$$
+A = \begin{pmatrix} 0 & 1 \\\ 1 & 0 \end{pmatrix}
+$$
+
+is distinct from $I$ and $-I$ and satisfies $A^2 = I$.
