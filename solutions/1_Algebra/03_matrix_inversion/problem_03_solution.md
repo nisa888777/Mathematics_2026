@@ -25,8 +25,14 @@ A square matrix is invertible if and only if it is non-singular (has a non-zero 
 ---
 
 ### 1. Explanation Using the Determinant
+For a $2 \times 2$ matrix
 
-For a $2 \times 2$ matrix $A = \begin{pmatrix} a & b \\\ c & d \end{pmatrix}$, the determinant is given by $\det(A) = ad - bc$. Substituting the entries of $A$:
+$$
+M = \begin{pmatrix} a & b \\\ c & d \end{pmatrix}
+$$
+
+the determinant is given by $\det(M) = ad - bc$. Substituting the entries of $A$:
+
 
 $$
 \det(A) = (2)(2) - (4)(1) = 4 - 4 = 0
