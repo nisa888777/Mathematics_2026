@@ -14,7 +14,7 @@ compute $\det A$ using Sarrus' rule. Then perform one simple check using a chose
 
 ## Solution
 
-We are given the $3 \times 3$ matrix[span_2](start_span)[span_2](end_span):
+We are given the $3 \times 3$ matrix:
 
 $$
 A = \begin{pmatrix} 1 & 2 & -1 \\\ 0 & 3 & 4 \\\ 2 & 1 & 5 \end{pmatrix}
@@ -24,7 +24,7 @@ $$
 
 ### 1. Computing $\det(A)$ Using Sarrus' Rule
 
-To apply Sarrus' rule, we repeat the first two columns to the right of the matrix[span_3](start_span)[span_3](end_span):
+To apply Sarrus' rule, we repeat the first two columns to the right of the matrix:
 
 $$
 \begin{array}{ccc|cc}
@@ -56,7 +56,7 @@ $$
 
 ### 2. Simple Check Using a Determinant Property
 
-We verify the result using the **row operation invariance property**[span_4](start_span)[span_4](end_span): adding a scalar multiple of one row to another row does not change the determinant ($R_3 \to R_3 - 2R_1$).
+We verify the result using the **row operation invariance property**: adding a scalar multiple of one row to another row does not change the determinant ($R_3 \to R_3 - 2R_1$).
 
 * **Perform $R_3 \to R_3 - 2R_1$:**
 
@@ -76,7 +76,7 @@ $$
 \det(A) = \det(\tilde{A}) = 1 \cdot \det \begin{pmatrix} 3 & 4 \\\ -3 & 7 \end{pmatrix} = (3)(7) - (4)(-3) = 21 - (-12) = 33
 $$
 
-Both methods yield $\det(A) = 33$, confirming the calculation[span_5](start_span)[span_5](end_span).
+Both methods yield $\det(A) = 33$, confirming the calculation.
 
 ---
 
@@ -88,4 +88,4 @@ $$
 \det(A) = 33
 $$
 
-* **Verification:** Applying the row operation $R_3 \to R_3 - 2R_1$ preserves the determinant and confirms $\det(A) = 33$[span_6](start_span)[span_6](end_span).
+* **Verification:** Applying the row operation $R_3 \to R_3 - 2R_1$ preserves the determinant and confirms $\det(A) = 33$.
