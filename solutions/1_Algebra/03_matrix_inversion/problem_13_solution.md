@@ -131,4 +131,10 @@ $$
 T^{-1} = \begin{pmatrix} \frac{1}{2} & -\frac{1}{2} \\\ 0 & 1 \end{pmatrix}
 $$
 
-* Reversing the order fails because $H^{-1}S^{-1} = \begin{pmatrix} \frac{1}{2} & -1 \\\ 0 & 1 \end{pmatrix} \neq T^{-1}$; undoing a sequence of transformations always requires reversing the last operation first.
+* Reversing the order fails because
+
+$$
+H^{-1}S^{-1} = \begin{pmatrix} \frac{1}{2} & -1 \\\ 0 & 1 \end{pmatrix} \neq T^{-1}
+$$
+
+Undoing a sequence of transformations always requires reversing the last operation first.
