@@ -1,5 +1,23 @@
 # Exercise 3. When Can Matrices Be Multiplied?
 
+## Question
+
+The matrix sizes are
+
+$$
+A_{2 \times 3}, \qquad B_{3 \times 4}, \qquad C_{4 \times 2}, \qquad D_{2 \times 2}.
+$$
+
+For the products
+
+$$
+AB, \; BA, \; BC, \; CB, \; AC, \; CA, \; AD, \; DA
+$$
+
+determine whether they are defined. If so, state the size of the result. Justify each decision using the dimension compatibility condition.
+
+---
+
 **Given Matrix Dimensions:**
 - $A$ is of size $2 \times 3$
 - $B$ is of size $3 \times 4$
