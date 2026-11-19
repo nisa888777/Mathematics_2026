@@ -24,7 +24,13 @@ $$
 
 ### 1. Apply the $2 \times 2$ Inverse Formula
 
-For a general $2 \times 2$ matrix $A = \begin{pmatrix} a & b \\\ c & d \end{pmatrix}$, the inverse exists if $\det(A) = ad - bc \neq 0$ and is given by:
+For a general $2 \times 2$ matrix
+
+$$
+A = \begin{pmatrix} a & b \\\ c & d \end{pmatrix},
+$$
+
+the inverse exists if $\det(A) = ad - bc \neq 0$ and is given by:
 
 $$
 A^{-1} = \frac{1}{ad - bc} \begin{pmatrix} d & -b \\\ -c & a \end{pmatrix}
