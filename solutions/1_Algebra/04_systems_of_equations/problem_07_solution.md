@@ -25,7 +25,13 @@ For case 1, carry out the chosen method completely. For cases 2 and 3, describe 
 ### 1. Case 1: One System with a Triangular Coefficient Matrix
 
 * **Chosen Method:** Direct **back-substitution** (no elimination or matrix inversion needed).
-* **Justification:** There is only $1$ right-hand side, and the coefficient matrix $A = \begin{pmatrix} 2 & -1 \\\ 0 & 4 \end{pmatrix}$ is already in upper-triangular form. Row reduction or computing $A^{-1}$ would perform unnecessary work since the last variable $y$ is already isolated.
+* **Justification:** There is only $1$ right-hand side, and the coefficient matrix
+
+$$
+A = \begin{pmatrix} 2 & -1 \\\ 0 & 4 \end{pmatrix}
+$$
+
+is already in upper-triangular form. Row reduction or computing $A^{-1}$ would perform unnecessary work since the last variable $y$ is already isolated.
 * **Complete Execution:**
   1. From the second equation ($4y = 8$):
 
