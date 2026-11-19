@@ -18,7 +18,7 @@ Give the solution in parametric form, identify a free variable, and for one chos
 
 ## Solution
 
-We form the augmented matrix for the $3 \times 3$ linear system[span_1](start_span)[span_1](end_span):
+We form the augmented matrix for the $3 \times 3$ linear system:
 
 $$
 \left( \begin{array}{ccc|c} 1 & 1 & 1 & 2 \\\ 2 & 2 & 2 & 4 \\\ 1 & -1 & 1 & 0 \end{array} \right)
@@ -79,7 +79,7 @@ $$
 (x, y, z) = (1 - 2, \, 1, \, 2) = (-1, 1, 2)
 $$
 
-Substituting $(x, y, z) = (-1, 1, 2)$ into all three original equations[span_2](start_span)[span_2](end_span):
+Substituting $(x, y, z) = (-1, 1, 2)$ into all three original equations:
 
 1. **Equation 1:** $(-1) + 1 + 2 = 2 \quad \checkmark$
 2. **Equation 2:** $2(-1) + 2(1) + 2(2) = -2 + 2 + 4 = 4 \quad \checkmark$
@@ -93,4 +93,4 @@ All three equations hold, confirming the parametric solution.
 
 * **Free variable:** $z = t \in \mathbb{R}$.
 * **Parametric solution:** $(x, y, z) = (1 - t, \, 1, \, t)$ for any $t \in \mathbb{R}$.
-* **Verification:** Choosing $t = 2$ gives $(-1, 1, 2)$, which satisfies every equation in the system[span_3](start_span)[span_3](end_span).
+* **Verification:** Choosing $t = 2$ gives $(-1, 1, 2)$, which satisfies every equation in the system.
