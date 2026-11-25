@@ -102,13 +102,13 @@ $$
 \begin{pmatrix} 1 & -1 \\\ 0 & 3 \end{pmatrix}
 $$
 
-* **What differs:** Only the numerical values in the **right-hand side column** change, because the initial right-hand side vectors $\begin{pmatrix} 5 \\\ 1 \end{pmatrix}$ and $\begin{pmatrix} 1 \\\ 4 \end{pmatrix}$ are different.
+* **What differs:** Only the numerical values in the **right-hand side column** change, because the initial right-hand side vectors $(5, 1)^T$ and $(1, 4)^T$ are different.
 * **Why:** Elementary row operations used to introduce zeros below the pivots depend solely on the entries of the **coefficient matrix $A$**. The right-hand side vector $b$ does not determine which row operations or multipliers are chosen; it simply undergoes the same linear transformations alongside $A$.
 
 ---
 
 ### Conclusion
 
-* **First system solution:** $(x, y) = (2, 1)$[span_1](start_span)[span_1](end_span).
-* **Second system solution:** $(x, y) = \left(\frac{5}{3}, -\frac{7}{3}\right)$[span_2](start_span)[span_2](end_span).
-* **Comparison:** Both systems undergo the exact same row operations ($R_1 \leftrightarrow R_2$ and $R_2 \leftarrow R_2 - 2R_1$) and produce the same upper-triangular coefficient matrix, because the elimination process is governed entirely by the shared coefficient matrix $A$, independently of the right-hand side vector[span_3](start_span)[span_3](end_span).
+* **First system solution:** $(x, y) = (2, 1)$.
+* **Second system solution:** $(x, y) = \left(\frac{5}{3}, -\frac{7}{3}\right)$.
+* **Comparison:** Both systems undergo the exact same row operations ($R_1 \leftrightarrow R_2$ and $R_2 \leftarrow R_2 - 2R_1$) and produce the same upper-triangular coefficient matrix, because the elimination process is governed entirely by the shared coefficient matrix $A$, independently of the right-hand side vector.
