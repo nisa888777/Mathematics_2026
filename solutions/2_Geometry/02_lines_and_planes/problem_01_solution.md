@@ -24,7 +24,7 @@ $$
 v = \overrightarrow{AB} = B - A = (4 - 1, \, -1 - 2) = (3, -3)
 $$
 
-*(Note: Any nonzero scalar multiple of $(3, -3)$, such as $v_{\text{simp}} = \frac{1}{3}(3, -3) = (1, -1)$, is also a valid direction vector for the same line.)*
+* **Simplified direction vector option:** Any nonzero scalar multiple of $(3, -3)$, such as $w = \frac{1}{3}(3, -3) = (1, -1)$, is also a valid direction vector for the same line.
 
 * **Step 2 — Write the parametric equations:** Using the base point $A = (1, 2)$ and direction vector $v = (3, -3)$:
 
@@ -35,7 +35,7 @@ y(t) = 2 - 3t
 \end{cases}, \qquad t \in \mathbb{R}
 $$
 
-*(Equivalently, using the simplified direction vector $v_{\text{simp}} = (1, -1)$ gives $x(s) = 1 + s$ and $y(s) = 2 - s$ for $s \in \mathbb{R}$.)*
+* **Equivalent simplified parametrization:** Using $w = (1, -1)$ gives $x(s) = 1 + s$ and $y(s) = 2 - s$ for $s \in \mathbb{R}$.
 
 ---
 
@@ -85,6 +85,6 @@ This confirms that $n = (1, 1)$ is perpendicular to the line's direction vector 
 
 * **Parametric form:** $x = 1 + 3t, \; y = 2 - 3t$ ($t \in \mathbb{R}$), or equivalently $x = 1 + s, \; y = 2 - s$ ($s \in \mathbb{R}$).
 * **General form:** $x + y - 3 = 0$.
-* **Direction vector:** $v = (3, -3)$ (or simplified $v_{\text{simp}} = (1, -1)$).
+* **Direction vector:** $v = (3, -3)$, or simplified $w = (1, -1)$.
 * **Normal vector example:** $n = (1, 1)$ (satisfying $n \cdot v = 0$).
 * **Point verification:** Both $A = (1, 2)$ and $B = (4, -1)$ satisfy $x + y - 3 = 0$ and correspond to $t = 0$ and $t = 1$ in the parametric equations.
