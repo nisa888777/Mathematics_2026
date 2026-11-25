@@ -81,7 +81,7 @@ $$
 
 ### Conclusion
 
-* **Relative position of $L_1$ ($v_1 = (2, 1, -1)$):** Intersects the plane $z = 0$ at a single point because $v_1 \cdot n = -1 \neq 0$.
+* **Relative position of $L_1$ with $v_1 = (2, 1, -1)$:** Intersects the plane $z = 0$ at a single point because $v_1 \cdot n = -1 \neq 0$.
 * **Intersection point of $L_1$:** $Q = (2, 1, 0)$ (obtained at $t = 1$).
-* **Relative position of $L_2$ ($v_2 = (2, 1, 0)$):** Strictly parallel to the plane $z = 0$ (no intersection).
+* **Relative position of $L_2$ with $v_2 = (2, 1, 0)$:** Strictly parallel to the plane $z = 0$ (no intersection).
 * **Equation-free recognition:** $v_2$ has zero $z$-component ($v_2 \cdot n = 0$), so moving from $P = (0, 0, 1)$ along $v_2$ never changes the height $z = 1$, keeping the entire line strictly above $z = 0$.
