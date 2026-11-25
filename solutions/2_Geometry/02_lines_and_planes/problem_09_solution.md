@@ -101,6 +101,6 @@ $$
 
 ### Conclusion
 
-* **Distance from $P = (2, 3)$ to $3x + 4y - 10 = 0$:** $d(P, L) = \frac{8}{5}$ ($1.6$)[span_2](start_span)[span_2](end_span).
-* **Distance from $Q = (2, -1, 3)$ to $2x - 2y + z - 4 = 0$:** $d(Q, \Pi) = \frac{5}{3}$[span_3](start_span)[span_3](end_span).
-* **Unified principle:** Both formulas are the exact same operation—the absolute scalar projection $\left|\overrightarrow{X_0 P} \cdot \frac{n}{\|n\|}\right|$ of a displacement vector onto the unit normal vector—differing only in the ambient dimension ($\mathbb{R}^2$ vs. $\mathbb{R}^3$)[span_4](start_span)[span_4](end_span).
+* **Distance from $P = (2, 3)$ to $3x + 4y - 10 = 0$:** $d(P, L) = \frac{8}{5}$ ($1.6$).
+* **Distance from $Q = (2, -1, 3)$ to $2x - 2y + z - 4 = 0$:** $d(Q, \Pi) = \frac{5}{3}$.
+* **Unified principle:** Both formulas are the exact same operation—the absolute scalar projection $\left|\overrightarrow{X_0 P} \cdot \frac{n}{\|n\|}\right|$ of a displacement vector onto the unit normal vector—differing only in the ambient dimension ($\mathbb{R}^2$ vs. $\mathbb{R}^3$).
