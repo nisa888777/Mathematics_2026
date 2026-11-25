@@ -1,50 +1,83 @@
-# Exercise 1. Definition of the Inverse
+# Exercise 1. From a System to a Matrix
 
 ## Question
 
-For
+Write the system
 
-$$A = \begin{pmatrix} 2 & 1 \\\ 1 & 1 \end{pmatrix}, \qquad B = \begin{pmatrix} 1 & -1 \\\ -1 & 2 \end{pmatrix}$$
+$$
+\begin{cases}
+2x - y + z = 4, \\\
+x + 3y - 2z = 1, \\\
+3x + y + z = 7.
+\end{cases}
+$$
 
-check, without using a formula, whether $B = A^{-1}$. Compute $AB$ and $BA$ and relate the result to the definition of the inverse.
+in the form $Ax = b$. Identify the coefficient matrix, the vector of unknowns, and the right-hand side vector. Explain how each row of the matrix corresponds to one equation.
 
 ---
 
 ## Solution
 
-We are given the $2 \times 2$ matrices:
+We are given a $3 \times 3$ system of linear equations in the unknowns $x, y, z$[span_1](start_span)[span_1](end_span):
 
-$$A = \begin{pmatrix} 2 & 1 \\\ 1 & 1 \end{pmatrix}, \qquad B = \begin{pmatrix} 1 & -1 \\\ -1 & 2 \end{pmatrix}$$
-
----
-
-### 1. Compute $AB$
-
-Multiplying $A$ by $B$ on the right:
-
-$$AB = \begin{pmatrix} 2 & 1 \\\ 1 & 1 \end{pmatrix} \begin{pmatrix} 1 & -1 \\\ -1 & 2 \end{pmatrix} = \begin{pmatrix} (2)(1) + (1)(-1) & (2)(-1) + (1)(2) \\\ (1)(1) + (1)(-1) & (1)(-1) + (1)(2) \end{pmatrix} = \begin{pmatrix} 2 - 1 & -2 + 2 \\\ 1 - 1 & -1 + 2 \end{pmatrix} = \begin{pmatrix} 1 & 0 \\\ 0 & 1 \end{pmatrix} = I$$
+$$
+\begin{cases}
+2x - y + z = 4, \\\
+x + 3y - 2z = 1, \\\
+3x + y + z = 7.
+\end{cases}
+$$
 
 ---
 
-### 2. Compute $BA$
+### 1. Write the System in the Matrix Form $Ax = b$
 
-Multiplying $B$ by $A$ on the right:
+Collecting the coefficients of $x$, $y$, and $z$ into a $3 \times 3$ matrix $A$, the unknowns into a $3 \times 1$ column vector $x$, and the constants into a $3 \times 1$ column vector $b$, the system takes the form $Ax = b$:
 
-$$BA = \begin{pmatrix} 1 & -1 \\\ -1 & 2 \end{pmatrix} \begin{pmatrix} 2 & 1 \\\ 1 & 1 \end{pmatrix} = \begin{pmatrix} (1)(2) + (-1)(1) & (1)(1) + (-1)(1) \\\ (-1)(2) + (2)(1) & (-1)(1) + (2)(1) \end{pmatrix} = \begin{pmatrix} 2 - 1 & 1 - 1 \\\ -2 + 2 & -1 + 2 \end{pmatrix} = \begin{pmatrix} 1 & 0 \\\ 0 & 1 \end{pmatrix} = I$$
+$$
+\begin{pmatrix} 2 & -1 & 1 \\\ 1 & 3 & -2 \\\ 3 & 1 & 1 \end{pmatrix} \begin{pmatrix} x \\\ y \\\ z \end{pmatrix} = \begin{pmatrix} 4 \\\ 1 \\\ 7 \end{pmatrix}
+$$
 
 ---
 
-### 3. Relation to the Definition of the Inverse
+### 2. Identify $A$, $x$, and $b$
 
-By definition, an $n \times n$ matrix $A$ is invertible if there exists an $n \times n$ matrix $B$ such that:
+* **Coefficient matrix ($A$):**
 
-$$AB = I \quad \text{and} \quad BA = I$$
+$$
+A = \begin{pmatrix} 2 & -1 & 1 \\\ 1 & 3 & -2 \\\ 3 & 1 & 1 \end{pmatrix}
+$$
 
-where $I$ is the $n \times n$ identity matrix. Because both products equal the $2 \times 2$ identity matrix $I$, $B$ satisfies the exact definition of the inverse of $A$. By the uniqueness of the matrix inverse, we conclude that $B = A^{-1}$.
+* **Vector of unknowns ($x$):**
+
+$$
+x = \begin{pmatrix} x \\\ y \\\ z \end{pmatrix}
+$$
+
+* **Right-hand side vector ($b$):**
+
+$$
+b = \begin{pmatrix} 4 \\\ 1 \\\ 7 \end{pmatrix}
+$$
+
+---
+
+### 3. How Each Row of the Matrix Corresponds to One Equation
+
+By the definition of matrix–vector multiplication, the $i$-th entry of $Ax$ is obtained by taking the dot product of the $i$-th row of $A$ with the column vector of unknowns $x$, and setting it equal to the $i$-th entry of $b$:
+
+1. **Row 1 ($\begin{pmatrix} 2 & -1 & 1 \end{pmatrix}$):** Multiplying by $x$ gives $2(x) + (-1)(y) + 1(z) = 2x - y + z$, which equals the first entry of $b$ ($4$), reproducing the first equation **$2x - y + z = 4$**[span_2](start_span)[span_2](end_span).
+2. **Row 2 ($\begin{pmatrix} 1 & 3 & -2 \end{pmatrix}$):** Multiplying by $x$ gives $1(x) + 3(y) + (-2)(z) = x + 3y - 2z$, which equals the second entry of $b$ ($1$), reproducing the second equation **$x + 3y - 2z = 1$**[span_3](start_span)[span_3](end_span).
+3. **Row 3 ($\begin{pmatrix} 3 & 1 & 1 \end{pmatrix}$):** Multiplying by $x$ gives $3(x) + 1(y) + 1(z) = 3x + y + z$, which equals the third entry of $b$ ($7$), reproducing the third equation **$3x + y + z = 7$**[span_4](start_span)[span_4](end_span).
 
 ---
 
 ### Conclusion
 
-* Both $AB = I$ and $BA = I$ hold.
-* Therefore, by the definition of a matrix inverse, **$B = A^{-1}$**.
+* **Matrix form ($Ax = b$):**
+
+$$
+\begin{pmatrix} 2 & -1 & 1 \\\ 1 & 3 & -2 \\\ 3 & 1 & 1 \end{pmatrix} \begin{pmatrix} x \\\ y \\\ z \end{pmatrix} = \begin{pmatrix} 4 \\\ 1 \\\ 7 \end{pmatrix}
+$$
+
+* Each row of $A$ stores the ordered coefficients of $(x, y, z)$ for a single equation, while the corresponding entry of $b$ stores that equation's constant term[span_5](start_span)[span_5](end_span).
