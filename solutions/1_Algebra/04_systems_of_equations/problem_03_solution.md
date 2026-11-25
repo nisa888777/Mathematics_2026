@@ -1,66 +1,66 @@
-# Exercise 3. When Does the Inverse Not Exist?
+# Exercise 3. Inconsistent System
 
 ## Question
 
-For
+Solve or show that the system is inconsistent:
 
 $$
-A = \begin{pmatrix} 2 & 4 \\\ 1 & 2 \end{pmatrix}
+\begin{cases}
+x + 2y = 3, \\\
+2x + 4y = 7.
+\end{cases}
 $$
 
-explain in two ways why $A^{-1}$ does not exist: using the determinant and using dependence between the rows.
+Show how the contradiction appears in the matrix after elimination and interpret it in terms of equations.
 
 ---
 
 ## Solution
 
-We are given the $2 \times 2$ matrix:
+We write the augmented matrix for the $2 \times 2$ linear system:
 
 $$
-A = \begin{pmatrix} 2 & 4 \\\ 1 & 2 \end{pmatrix}
+\left( \begin{array}{cc|c} 1 & 2 & 3 \\\ 2 & 4 & 7 \end{array} \right)
 $$
 
 ---
 
-### 1. Explanation Using the Determinant
+### 1. Apply Gaussian Elimination
 
-A square matrix $A$ is invertible if and only if its determinant is non-zero ($\det(A) \neq 0$). Computing the determinant of $A$:
-
-$$
-\det(A) = (2)(2) - (4)(1) = 4 - 4 = 0
-$$
-
-Because $\det(A) = 0$, the $2 \times 2$ inverse formula
+Perform the elementary row operation $R_2 \leftarrow R_2 - 2R_1$ to eliminate the $x$-entry below the first pivot:
 
 $$
-A^{-1} = \frac{1}{\det(A)} \begin{pmatrix} d & -b \\\ -c & a \end{pmatrix}
+\left( \begin{array}{cc|c} 1 & 2 & 3 \\\ 0 & 0 & 1 \end{array} \right)
 $$
-
-would require division by zero ($\frac{1}{0}$), which is undefined. Thus, $A^{-1}$ does not exist.
 
 ---
 
-### 2. Explanation Using Linear Dependence Between the Rows
+### 2. How the Contradiction Appears in the Matrix
 
-Let the rows of $A$ be $\mathbf{r}_1 = (2, 4)$ and $\mathbf{r}_2 = (1, 2)$. Notice that the first row is a scalar multiple of the second row:
-
-$$
-\mathbf{r}_1 = 2\mathbf{r}_2 \qquad \text{(equivalently, } \mathbf{r}_1 - 2\mathbf{r}_2 = \mathbf{0}\text{)}
-$$
-
-Because the rows are linearly dependent:
-
-* During Gauss–Jordan elimination ($R_1 \leftarrow R_1 - 2R_2$), the first row becomes a row of zeros:
+In the reduced augmented matrix, the second row has all zeros on the left-hand side of the vertical bar and a non-zero constant on the right-hand side:
 
 $$
-\begin{pmatrix} 2 & 4 \\\ 1 & 2 \end{pmatrix} \longrightarrow \begin{pmatrix} 0 & 0 \\\ 1 & 2 \end{pmatrix}
+\left( \begin{array}{cc|c} 0 & 0 & 1 \end{array} \right)
 $$
 
-* Since a matrix with a zero row cannot be reduced to the $2 \times 2$ identity matrix $I$, no inverse matrix $A^{-1}$ can exist.
+This row has the inconsistent form $(0 \;\; 0 \mid c)$ with $c = 1 \neq 0$, which proves immediately that the system is **inconsistent** and has **no solution**.
+
+---
+
+### 3. Interpretation in Terms of Equations
+
+* Translating the second row back into an algebraic equation gives:
+
+$$
+0x + 0y = 1 \quad \Longleftrightarrow \quad 0 = 1
+$$
+
+which is a mathematical contradiction that cannot be satisfied by any pair of real numbers $(x, y)$.
+* Comparing the original equations directly, multiplying the first equation ($x + 2y = 3$) by $2$ requires $2x + 4y = 6$, which directly contradicts the second equation $2x + 4y = 7$ (geometrically, these represent two distinct parallel lines that never intersect).
 
 ---
 
 ### Conclusion
 
-* **Determinant test:** $\det(A) = 0$, so $A$ is singular.
-* **Row dependence:** Row $1$ is twice Row $2$ ($\mathbf{r}_1 = 2\mathbf{r}_2$), meaning $A$ cannot be row-reduced to the identity matrix $I$. Therefore, **$A^{-1}$ does not exist**.
+* **Consistency:** The system is **inconsistent** and has **no solution**.
+* **Matrix contradiction:** Elimination produces the row $(0 \;\; 0 \mid 1)$, corresponding to the impossible equation $0 = 1$.
