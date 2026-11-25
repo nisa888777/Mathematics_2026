@@ -74,8 +74,8 @@ Since $r \cdot v = 0$ and both vectors are nonzero, $r$ is confirmed to be **per
 
 Geometrically in $\mathbb{R}^2$, dropping a perpendicular line from the tip of $u = (4, 2)$ onto the line spanned by $v = (1, 1)$ (the line $y = x$) divides $u$ into two orthogonal legs of a right triangle:
 
-* **Parallel component ($\text{proj}_{v} u = (3, 3)$):** The shadow cast by $u$ along the line $y = x$, which is a scalar multiple ($3v$) of $v$.
-* **Perpendicular (residual) component ($r = (1, -1)$):** The shortest displacement vector connecting the line $y = x$ at $(3, 3)$ directly to the tip of $u$ at $(4, 2)$. Because the shortest path from a point to a line meets that line at a $90^\circ$ angle, $r$ must be orthogonal to $v$, giving $r \cdot v = 0$ and satisfying the Pythagorean identity $\|u\|^2 = \|\text{proj}_{v} u\|^2 + \|r\|^2$ ($20 = 18 + 2$).
+* **Parallel component** ($\text{proj}_{v} u = (3, 3)$): The shadow cast by $u$ along the line $y = x$, which is a scalar multiple ($3v$) of $v$.
+* **Perpendicular (residual) component** ($r = (1, -1)$): The shortest displacement vector connecting the line $y = x$ at $(3, 3)$ directly to the tip of $u$ at $(4, 2)$. Because the shortest path from a point to a line meets that line at a $90^\circ$ angle, $r$ must be orthogonal to $v$, giving $r \cdot v = 0$ and satisfying the Pythagorean identity $\|u\|^2 = \|\text{proj}_{v} u\|^2 + \|r\|^2$ ($20 = 18 + 2$).
 
 ---
 
