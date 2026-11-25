@@ -34,7 +34,7 @@ $$
 v = (2, 4, 6) = 2(1, 2, 3) = 2u
 $$
 
-Thus, $v$ is a **scalar multiple** of $u$ ($v = 2u$, or equivalently $2u - v = (0, 0, 0)$).
+Thus, $v$ is a **scalar multiple** of $u$: $v = 2u$, or equivalently $2u - v = (0, 0, 0)$.
 
 ---
 
