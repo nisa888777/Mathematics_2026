@@ -110,7 +110,7 @@ $$
 ### 4. Why the Value Is $1$ for $a$ and $b$ Despite Different Lengths
 
 * **Scale Invariance of Direction (Normalization):** Dividing $u \cdot v$ by $\|u\|\|v\|$ normalizes each vector to its unit direction vector $\hat{u} = \frac{u}{\|u\|}$ and $\hat{v} = \frac{v}{\|v\|}$, removing magnitude information so that $\frac{u \cdot v}{\|u\|\|v\|} = \hat{u} \cdot \hat{v}$ depends **only on direction**, not length.
-* **Same Ray / Positive Scalar Multiple:** Observe that $b = (2, 4, 2) = 2(1, 2, 1) = 2a$. Because $b$ is a **positive scalar multiple** of $a$, both vectors point in the exact same direction along the same ray from the origin (their unit vectors are identical: $\hat{a} = \hat{b} = \frac{1}{\sqrt{6}}(1, 2, 1)$). Consequently, the angle between them is $\theta_{ab} = 0$, giving $\cos(0) = 1$, and both make the exact same angle with $c$.
+* **Same Ray / Positive Scalar Multiple:** Observe that $b = (2, 4, 2) = 2(1, 2, 1) = 2a$. Because $b$ is a **positive scalar multiple** of $a$, both vectors point in the exact same direction along the same ray from the origin, so their unit vectors are identical: $\hat{a} = \hat{b} = \frac{1}{\sqrt{6}}(1, 2, 1)$. Consequently, the angle between them is $\theta_{ab} = 0$, giving $\cos(0) = 1$, and both make the exact same angle with $c$.
 
 ---
 
