@@ -6,8 +6,8 @@ Solve
 
 $$
 \begin{cases}
-x + 2y - z = 0, \\
-2x + 4y - 2z = 0, \\
+x + 2y - z = 0, \\\
+2x + 4y - 2z = 0, \\\
 x - y + 2z = 0.
 \end{cases}
 $$
@@ -21,7 +21,7 @@ Give all solutions in parametric form and explain why $(0, 0, 0)$ always satisfi
 We form the $3 \times 4$ augmented matrix for the homogeneous linear system:
 
 $$
-\left( \begin{array}{ccc|c} 1 & 2 & -1 & 0 \\ 2 & 4 & -2 & 0 \\ 1 & -1 & 2 & 0 \end{array} \right)
+\left( \begin{array}{ccc|c} 1 & 2 & -1 & 0 \\\ 2 & 4 & -2 & 0 \\\ 1 & -1 & 2 & 0 \end{array} \right)
 $$
 
 ---
@@ -31,19 +31,19 @@ $$
 * **Step 1:** Eliminate $x$ from Row 2 ($R_2 \leftarrow R_2 - 2R_1$) and Row 3 ($R_3 \leftarrow R_3 - R_1$):
 
 $$
-\left( \begin{array}{ccc|c} 1 & 2 & -1 & 0 \\ 0 & 0 & 0 & 0 \\ 0 & -3 & 3 & 0 \end{array} \right)
+\left( \begin{array}{ccc|c} 1 & 2 & -1 & 0 \\\ 0 & 0 & 0 & 0 \\\ 0 & -3 & 3 & 0 \end{array} \right)
 $$
 
 * **Step 2:** Swap Row 2 and Row 3 ($R_2 \leftrightarrow R_3$) so that the zero row moves to the bottom:
 
 $$
-\left( \begin{array}{ccc|c} 1 & 2 & -1 & 0 \\ 0 & -3 & 3 & 0 \\ 0 & 0 & 0 & 0 \end{array} \right)
+\left( \begin{array}{ccc|c} 1 & 2 & -1 & 0 \\\ 0 & -3 & 3 & 0 \\\ 0 & 0 & 0 & 0 \end{array} \right)
 $$
 
 * **Step 3:** Scale Row 2 ($R_2 \leftarrow -\frac{1}{3}R_2$) to obtain a leading $1$ in the second pivot:
 
 $$
-\left( \begin{array}{ccc|c} 1 & 2 & -1 & 0 \\ 0 & 1 & -1 & 0 \\ 0 & 0 & 0 & 0 \end{array} \right)
+\left( \begin{array}{ccc|c} 1 & 2 & -1 & 0 \\\ 0 & 1 & -1 & 0 \\\ 0 & 0 & 0 & 0 \end{array} \right)
 $$
 
 ---
@@ -69,7 +69,7 @@ $$
 In vector parametric form, all solutions are given by:
 
 $$
-\begin{pmatrix} x \\ y \\ z \end{pmatrix} = \begin{pmatrix} -t \\ t \\ t \end{pmatrix} = t \begin{pmatrix} -1 \\ 1 \\ 1 \end{pmatrix}, \qquad t \in \mathbb{R}
+\begin{pmatrix} x \\\ y \\\ z \end{pmatrix} = \begin{pmatrix} -t \\\ t \\\ t \end{pmatrix} = t \begin{pmatrix} -1 \\\ 1 \\\ 1 \end{pmatrix}, \qquad t \in \mathbb{R}
 $$
 
 ---
