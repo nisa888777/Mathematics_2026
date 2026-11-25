@@ -1,77 +1,66 @@
-# Exercise 6. A System with a Parameter — Which Cases Actually Occur?
+# Exercise 5. Row Echelon Form and Number of Solutions
 
 ## Question
 
-Analyze, depending on the parameter $a$, the system
+For the augmented matrix
 
 $$
-\begin{cases}
-x + y = 2, \\\
-ax + ay = 4.
-\end{cases}
+\left( \begin{array}{ccc|c} 1 & 2 & -1 & 3 \\\ 0 & 1 & 2 & 1 \\\ 0 & 0 & 0 & 0 \end{array} \right)
 $$
 
-Among the three possibilities — exactly one solution, infinitely many solutions, no solution — determine which actually occur and for which values of $a$. If one type cannot occur, explain why.
+determine the number of solutions and write them in parametric form. Explain how you know how many variables may be chosen freely.
 
 ---
 
 ## Solution
 
-We write the augmented matrix of the system:
+We examine the given $3 \times 4$ augmented matrix in row echelon form:
 
 $$
-\left( \begin{array}{cc|c} 1 & 1 & 2 \\\ a & a & 4 \end{array} \right)
-$$
-
----
-
-### 1. Row Reduction Depending on $a$
-
-Perform the elementary row operation $R_2 \leftarrow R_2 - aR_1$ to eliminate the entry below the pivot:
-
-$$
-\left( \begin{array}{cc|c} 1 & 1 & 2 \\\ 0 & 0 & 4 - 2a \end{array} \right)
-$$
-
-The second row corresponds to the equation:
-
-$$
-0x + 0y = 4 - 2a \quad \Longleftrightarrow \quad 0 = 4 - 2a
+\left( \begin{array}{ccc|c} 1 & 2 & -1 & 3 \\\ 0 & 1 & 2 & 1 \\\ 0 & 0 & 0 & 0 \end{array} \right)
 $$
 
 ---
 
-### 2. Case-by-Case Analysis of the Three Possibilities
+### 1. Number of Solutions and Free Variables
 
-1. **Infinitely Many Solutions ($a = 2$):**
-   * Setting the right-hand side of Row 2 equal to zero gives $4 - 2a = 0 \implies a = 2$.
-   * When $a = 2$, the augmented matrix becomes:
-
-$$
-\left( \begin{array}{cc|c} 1 & 1 & 2 \\\ 0 & 0 & 0 \end{array} \right)
-$$
-
-   * The second equation ($2x + 2y = 4$) is simply twice the first equation ($x + y = 2$). Letting $y = t \in \mathbb{R}$ gives infinitely many solutions: $(x, y) = (2 - t, \, t)$.
-
-2. **No Solution ($a \neq 2$):**
-   * Whenever $a \neq 2$, we have $4 - 2a \neq 0$.
-   * Row 2 becomes $0 = 4 - 2a \neq 0$, which is a contradiction (for example, if $a = 0$, $0 = 4$; if $a = 1$, $x + y = 2$ and $x + y = 4$ represent two parallel lines).
-   * Therefore, the system is inconsistent and has **no solution** for all $a \neq 2$.
-
-3. **Exactly One Solution (Never Occurs):**
-   * **Why it cannot occur:** For any $a \in \mathbb{R}$, the coefficient matrix is:
+* **Consistency check:** The last row represents the equation $0x_1 + 0x_2 + 0x_3 = 0$, which is always satisfied. Since there is no inconsistent row of the form $(0 \;\; 0 \;\; 0 \mid c)$ with $c \neq 0$, the system is **consistent**.
+* **How many variables may be chosen freely:** There are $n = 3$ unknowns ($x_1, x_2, x_3$) and $r = 2$ non-zero pivot rows (leading $1$s in Column 1 and Column 2). The number of free variables equals the number of non-pivot columns:
 
 $$
-A = \begin{pmatrix} 1 & 1 \\\ a & a \end{pmatrix}
+\text{Number of free variables} = n - r = 3 - 2 = 1
 $$
 
-   * Its second row $(a, a)$ is always a scalar multiple of its first row $(1, 1)$, so $\det(A) = 1 \cdot a - 1 \cdot a = 0$ for every value of $a$.
-   * Because the rank of the coefficient matrix can never be $2$ (there is always a free variable whenever the system is consistent), the lines $x + y = 2$ and $ax + ay = 4$ can never intersect at a single unique point.
+Because Column 3 does not contain a pivot, **$x_3$ may be chosen freely** ($1$ free variable). Since a free real parameter can take infinitely many values, the system has **infinitely many solutions**.
+
+---
+
+### 2. Parametric Form of the Solutions
+
+Let the free variable be $x_3 = t$, where $t \in \mathbb{R}$. Solving for the pivot variables $x_2$ and $x_1$ by back-substitution:
+
+* From Row 2 ($x_2 + 2x_3 = 1$):
+
+$$
+x_2 = 1 - 2x_3 = 1 - 2t
+$$
+
+* From Row 1 ($x_1 + 2x_2 - x_3 = 3$):
+
+$$
+x_1 = 3 - 2x_2 + x_3 = 3 - 2(1 - 2t) + t = 3 - 2 + 4t + t = 1 + 5t
+$$
+
+In vector parametric form, the solution set is:
+
+$$
+\begin{pmatrix} x_1 \\\ x_2 \\\ x_3 \end{pmatrix} = \begin{pmatrix} 1 + 5t \\\ 1 - 2t \\\ t \end{pmatrix} = \begin{pmatrix} 1 \\\ 1 \\\ 0 \end{pmatrix} + t \begin{pmatrix} 5 \\\ -2 \\\ 1 \end{pmatrix}, \qquad t \in \mathbb{R}
+$$
 
 ---
 
 ### Conclusion
 
-* **Infinitely many solutions:** Occurs only when **$a = 2$**.
-* **No solution:** Occurs for all **$a \neq 2$**.
-* **Exactly one solution:** **Never occurs** for any $a \in \mathbb{R}$, because the coefficient rows $(1, 1)$ and $(a, a)$ are always linearly dependent ($\det(A) = 0$).
+* **Number of solutions:** Infinitely many solutions (the system is consistent and has $1$ free variable).
+* **Free variables:** $n - r = 3 - 2 = 1$ variable ($x_3 = t \in \mathbb{R}$) may be chosen freely because Column 3 lacks a pivot.
+* **Parametric form:** $(x_1, x_2, x_3) = (1 + 5t, \, 1 - 2t, \, t)$ for $t \in \mathbb{R}$.
