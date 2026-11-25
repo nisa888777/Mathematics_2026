@@ -41,7 +41,7 @@ $$
 \overrightarrow{AB} \times \overrightarrow{AC} = (2, -4, 5)
 $$
 
-*(Orthogonality check: $(2, -4, 5) \cdot (2, 1, 0) = 4 - 4 + 0 = 0$ and $(2, -4, 5) \cdot (1, 3, 2) = 2 - 12 + 10 = 0$.)*
+* **Orthogonality check:** $(2, -4, 5) \cdot (2, 1, 0) = 4 - 4 + 0 = 0$ and $(2, -4, 5) \cdot (1, 3, 2) = 2 - 12 + 10 = 0$.
 
 * **Step 2 — Compute the Euclidean norm $\|\overrightarrow{AB} \times \overrightarrow{AC}\|$:**
 
