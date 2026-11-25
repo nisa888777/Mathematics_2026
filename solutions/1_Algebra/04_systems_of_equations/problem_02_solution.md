@@ -18,7 +18,7 @@ After solving, substitute the result into all equations and check consistency.
 
 ## Solution
 
-We form the augmented matrix for the $3 \times 3$ linear system[span_1](start_span)[span_1](end_span):
+We form the augmented matrix for the $3 \times 3$ linear system:
 
 $$
 \left( \begin{array}{ccc|c} 1 & 1 & 1 & 6 \\\ 2 & -1 & 1 & 3 \\\ 1 & 2 & -1 & 2 \end{array} \right)
@@ -76,7 +76,7 @@ Thus, the unique solution is $(x, y, z) = (1, 2, 3)$.
 
 ### 3. Substitute the Result into All Equations to Check Consistency
 
-Substituting $(x, y, z) = (1, 2, 3)$ into each original equation[span_2](start_span)[span_2](end_span):
+Substituting $(x, y, z) = (1, 2, 3)$ into each original equation:
 
 1. **Equation 1 ($x + y + z = 6$):**
 
