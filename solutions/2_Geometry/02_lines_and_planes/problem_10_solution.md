@@ -87,6 +87,6 @@ Additionally, the displacement vector $\overrightarrow{P' P} = P - P' = (2, 2, 2
 
 ### Conclusion
 
-* **Orthogonal projection:** $P_{\text{proj}} = (1, 0, 2)$[span_2](start_span)[span_2](end_span).
-* **Reflection across $x + y + z = 3$:** $P' = (0, -1, 1)$[span_3](start_span)[span_3](end_span).
-* **Midpoint verification:** The midpoint of $\overline{P P'}$ is $M = (1, 0, 2) = P_{\text{proj}}$, which satisfies $1 + 0 + 2 = 3$ and therefore lies on the plane[span_4](start_span)[span_4](end_span).
+* **Orthogonal projection:** $P_{\text{proj}} = (1, 0, 2)$.
+* **Reflection across $x + y + z = 3$:** $P' = (0, -1, 1)$.
+* **Midpoint verification:** The midpoint of $\overline{P P'}$ is $M = (1, 0, 2) = P_{\text{proj}}$, which satisfies $1 + 0 + 2 = 3$ and therefore lies on the plane.
