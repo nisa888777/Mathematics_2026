@@ -84,3 +84,4 @@ Geometrically in $\mathbb{R}^2$, dropping a perpendicular line from the tip of $
 * **Projection onto $v$:** $\text{proj}_{v} u = (3, 3)$.
 * **Perpendicular component:** $r = (1, -1)$.
 * **Orthogonality verification:** $r \cdot v = (1)(1) + (-1)(1) = 0$, confirming that $u = (3, 3) + (1, -1)$ decomposes $u$ into a component parallel to $v$ and a component perpendicular to $v$.
+
