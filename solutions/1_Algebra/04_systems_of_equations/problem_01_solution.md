@@ -18,7 +18,7 @@ in the form $Ax = b$. Identify the coefficient matrix, the vector of unknowns, a
 
 ## Solution
 
-We are given a $3 \times 3$ system of linear equations in the unknowns $x, y, z$[span_1](start_span)[span_1](end_span):
+We are given a $3 \times 3$ system of linear equations in the unknowns $x, y, z$:
 
 $$
 \begin{cases}
@@ -66,9 +66,9 @@ $$
 
 By the definition of matrix–vector multiplication, the $i$-th entry of $Ax$ is obtained by taking the dot product of the $i$-th row of $A$ with the column vector of unknowns $x$, and setting it equal to the $i$-th entry of $b$:
 
-1. **Row 1 ($\begin{pmatrix} 2 & -1 & 1 \end{pmatrix}$):** Multiplying by $x$ gives $2(x) + (-1)(y) + 1(z) = 2x - y + z$, which equals the first entry of $b$ ($4$), reproducing the first equation **$2x - y + z = 4$**[span_2](start_span)[span_2](end_span).
-2. **Row 2 ($\begin{pmatrix} 1 & 3 & -2 \end{pmatrix}$):** Multiplying by $x$ gives $1(x) + 3(y) + (-2)(z) = x + 3y - 2z$, which equals the second entry of $b$ ($1$), reproducing the second equation **$x + 3y - 2z = 1$**[span_3](start_span)[span_3](end_span).
-3. **Row 3 ($\begin{pmatrix} 3 & 1 & 1 \end{pmatrix}$):** Multiplying by $x$ gives $3(x) + 1(y) + 1(z) = 3x + y + z$, which equals the third entry of $b$ ($7$), reproducing the third equation **$3x + y + z = 7$**[span_4](start_span)[span_4](end_span).
+1. **Row 1:** Multiplying the first row $(2, -1, 1)$ by $x$ gives $2(x) + (-1)(y) + 1(z) = 2x - y + z$, which equals the first entry of $b$ ($4$), reproducing the first equation **$2x - y + z = 4$**.
+2. **Row 2:** Multiplying the second row $(1, 3, -2)$ by $x$ gives $1(x) + 3(y) + (-2)(z) = x + 3y - 2z$, which equals the second entry of $b$ ($1$), reproducing the second equation **$x + 3y - 2z = 1$**.
+3. **Row 3:** Multiplying the third row $(3, 1, 1)$ by $x$ gives $3(x) + 1(y) + 1(z) = 3x + y + z$, which equals the third entry of $b$ ($7$), reproducing the third equation **$3x + y + z = 7$**.
 
 ---
 
@@ -80,4 +80,4 @@ $$
 \begin{pmatrix} 2 & -1 & 1 \\\ 1 & 3 & -2 \\\ 3 & 1 & 1 \end{pmatrix} \begin{pmatrix} x \\\ y \\\ z \end{pmatrix} = \begin{pmatrix} 4 \\\ 1 \\\ 7 \end{pmatrix}
 $$
 
-* Each row of $A$ stores the ordered coefficients of $(x, y, z)$ for a single equation, while the corresponding entry of $b$ stores that equation's constant term[span_5](start_span)[span_5](end_span).
+* Each row of $A$ stores the ordered coefficients of $(x, y, z)$ for a single equation, while the corresponding entry of $b$ stores that equation's constant term.
