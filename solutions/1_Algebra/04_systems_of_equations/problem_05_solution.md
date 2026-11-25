@@ -25,7 +25,7 @@ $$
 ### 1. Number of Solutions and Free Variables
 
 * **Consistency check:** The last row represents the equation $0x_1 + 0x_2 + 0x_3 = 0$, which is always satisfied. Since there is no inconsistent row of the form $(0 \;\; 0 \;\; 0 \mid c)$ with $c \neq 0$, the system is **consistent**.
-* **How many variables may be chosen freely:** There are $n = 3$ unknowns ($x_1, x_2, x_3$) and $r = 2$ non-zero pivot rows (leading $1$s in Column 1 and Column 2). The number of free variables equals the number of non-pivot columns:
+* **How many variables may be chosen freely:** There are $n = 3$ unknowns ($x_1, x_2, x_3$) and $r = 2$ non-zero pivot rows (leading ones in Column 1 and Column 2). The number of free variables equals the number of non-pivot columns:
 
 $$
 \text{Number of free variables} = n - r = 3 - 2 = 1
