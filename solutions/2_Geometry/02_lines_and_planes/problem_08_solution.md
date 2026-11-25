@@ -83,9 +83,9 @@ $$
 
 Thus, $P = \left(\frac{3}{2}, 1, \frac{3}{2}\right)$ lies on the plane.
 
-* **Check 2 — Verify Membership on the Line ($(x, y, z) = (1, 0, 2) + t(1, 2, -1)$):**
+* **Check 2 — Verify Membership on the Line $L$:**
 
-Solve each coordinate equation for $t$:
+Solve each coordinate equation of $(x, y, z) = (1, 0, 2) + t(1, 2, -1)$ for $t$:
 * **$x$-coordinate:** $1 + t = \frac{3}{2} \implies t = \frac{3}{2} - 1 = \frac{1}{2}$
 * **$y$-coordinate:** $2t = 1 \implies t = \frac{1}{2}$
 * **$z$-coordinate:** $2 - t = \frac{3}{2} \implies t = 2 - \frac{3}{2} = \frac{1}{2}$
@@ -97,5 +97,5 @@ All three coordinates yield the exact same parameter $t = \frac{1}{2}$, confirmi
 ### Conclusion
 
 * **Intersection parameter:** $t = \frac{1}{2}$ (unique because $v \cdot n = 2 \neq 0$).
-* **Intersection point:** $P = \left(\frac{3}{2}, 1, \frac{3}{2}\right)$ (or $(1.5, 1, 1.5)$).
+* **Intersection point:** $P = \left(\frac{3}{2}, 1, \frac{3}{2}\right)$, or in decimal form $(1.5, 1, 1.5)$.
 * **Dual verification:** Substituting $P$ gives $\frac{3}{2} + 1 + \frac{3}{2} = 4$ in the plane equation and corresponds consistently to $t = \frac{1}{2}$ across all three coordinates of the line.
