@@ -1,72 +1,106 @@
-# Exercise 2. Formula for a 2×2 Matrix
+# Exercise 2. Gaussian Elimination — One Solution
 
 ## Question
 
-Find the inverse of
+Solve using Gaussian elimination:
 
 $$
-A = \begin{pmatrix} 3 & 2 \\\ 5 & 4 \end{pmatrix}
+\begin{cases}
+x + y + z = 6, \\\
+2x - y + z = 3, \\\
+x + 2y - z = 2.
+\end{cases}
 $$
 
-using the formula for a $2 \times 2$ matrix. At the end, check the result by computing one product with $A$.
+After solving, substitute the result into all equations and check consistency.
 
 ---
 
 ## Solution
 
-We are given the $2 \times 2$ matrix:
+We form the augmented matrix for the $3 \times 3$ linear system[span_1](start_span)[span_1](end_span):
 
 $$
-A = \begin{pmatrix} 3 & 2 \\\ 5 & 4 \end{pmatrix}
-$$
-
----
-
-### 1. Apply the $2 \times 2$ Inverse Formula
-
-For a general $2 \times 2$ matrix
-
-$$
-A = \begin{pmatrix} a & b \\\ c & d \end{pmatrix},
-$$
-
-the inverse exists if $\det(A) = ad - bc \neq 0$ and is given by:
-
-$$
-A^{-1} = \frac{1}{ad - bc} \begin{pmatrix} d & -b \\\ -c & a \end{pmatrix}
-$$
-
-First, we compute the determinant of $A$:
-
-$$
-\det(A) = (3)(4) - (2)(5) = 12 - 10 = 2
-$$
-
-Since $\det(A) = 2 \neq 0$, $A^{-1}$ exists. Substituting $a = 3$, $b = 2$, $c = 5$, and $d = 4$ into the formula:
-
-$$
-A^{-1} = \frac{1}{2} \begin{pmatrix} 4 & -2 \\\ -5 & 3 \end{pmatrix} = \begin{pmatrix} 2 & -1 \\\ -\frac{5}{2} & \frac{3}{2} \end{pmatrix}
+\left( \begin{array}{ccc|c} 1 & 1 & 1 & 6 \\\ 2 & -1 & 1 & 3 \\\ 1 & 2 & -1 & 2 \end{array} \right)
 $$
 
 ---
 
-### 2. Check the Result by Computing $A A^{-1}$
+### 1. Forward Elimination (Reduce to Row Echelon Form)
 
-We multiply $A$ by $A^{-1}$ to verify that the product equals the identity matrix $I$:
+**Step 1: Eliminate $x$ from Row 2 ($R_2 \leftarrow R_2 - 2R_1$) and Row 3 ($R_3 \leftarrow R_3 - R_1$)**
 
 $$
-A A^{-1} = \begin{pmatrix} 3 & 2 \\\ 5 & 4 \end{pmatrix} \begin{pmatrix} 2 & -1 \\\ -\frac{5}{2} & \frac{3}{2} \end{pmatrix} = \begin{pmatrix} (3)(2) + (2)\left(-\frac{5}{2}\right) & (3)(-1) + (2)\left(\frac{3}{2}\right) \\\ (5)(2) + (4)\left(-\frac{5}{2}\right) & (5)(-1) + (4)\left(\frac{3}{2}\right) \end{pmatrix} = \begin{pmatrix} 6 - 5 & -3 + 3 \\\ 10 - 10 & -5 + 6 \end{pmatrix} = \begin{pmatrix} 1 & 0 \\\ 0 & 1 \end{pmatrix} = I
+\left( \begin{array}{ccc|c} 1 & 1 & 1 & 6 \\\ 0 & -3 & -1 & -9 \\\ 0 & 1 & -2 & -4 \end{array} \right)
 $$
 
-Since $A A^{-1} = I$, the inverse matrix is verified.
+**Step 2: Swap Row 2 and Row 3 ($R_2 \leftrightarrow R_3$) to get a leading $1$ in the second pivot**
+
+$$
+\left( \begin{array}{ccc|c} 1 & 1 & 1 & 6 \\\ 0 & 1 & -2 & -4 \\\ 0 & -3 & -1 & -9 \end{array} \right)
+$$
+
+**Step 3: Eliminate $y$ from Row 3 ($R_3 \leftarrow R_3 + 3R_2$)**
+
+$$
+\left( \begin{array}{ccc|c} 1 & 1 & 1 & 6 \\\ 0 & 1 & -2 & -4 \\\ 0 & 0 & -7 & -21 \end{array} \right)
+$$
+
+---
+
+### 2. Back-Substitution
+
+From the triangular system represented by the row echelon form:
+
+1. **From Row 3 ($-7z = -21$):**
+
+$$
+z = \frac{-21}{-7} = 3
+$$
+
+2. **From Row 2 ($y - 2z = -4$):**
+
+$$
+y - 2(3) = -4 \quad \Longrightarrow \quad y - 6 = -4 \quad \Longrightarrow \quad y = 2
+$$
+
+3. **From Row 1 ($x + y + z = 6$):**
+
+$$
+x + 2 + 3 = 6 \quad \Longrightarrow \quad x + 5 = 6 \quad \Longrightarrow \quad x = 1
+$$
+
+Thus, the unique solution is $(x, y, z) = (1, 2, 3)$.
+
+---
+
+### 3. Substitute the Result into All Equations to Check Consistency
+
+Substituting $(x, y, z) = (1, 2, 3)$ into each original equation[span_2](start_span)[span_2](end_span):
+
+1. **Equation 1 ($x + y + z = 6$):**
+
+$$
+1 + 2 + 3 = 6 \quad \checkmark
+$$
+
+2. **Equation 2 ($2x - y + z = 3$):**
+
+$$
+2(1) - 2 + 3 = 2 - 2 + 3 = 3 \quad \checkmark
+$$
+
+3. **Equation 3 ($x + 2y - z = 2$):**
+
+$$
+1 + 2(2) - 3 = 1 + 4 - 3 = 2 \quad \checkmark
+$$
+
+All three equations are satisfied identically, confirming that the system is consistent and $(1, 2, 3)$ is the exact solution.
 
 ---
 
 ### Conclusion
 
-* The determinant of $A$ is $\det(A) = 2 \neq 0$.
-* The inverse matrix is:
-
-$$
-A^{-1} = \begin{pmatrix} 2 & -1 \\\ -\frac{5}{2} & \frac{3}{2} \end{pmatrix}
-$$
+* **Unique solution:** $(x, y, z) = (1, 2, 3)$.
+* **Consistency check:** Substituting $x = 1$, $y = 2$, and $z = 3$ satisfies all three equations ($6 = 6$, $3 = 3$, and $2 = 2$).
