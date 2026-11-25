@@ -83,6 +83,6 @@ $$
 
 ### Conclusion
 
-* **One intersection point:** $n \cdot v \neq 0$ (e.g., $L_1: (1, 2, 3) + t(0, 0, -1)$ intersects $z = 0$ at $(1, 2, 0)$).
+* **One intersection point:** $n \cdot v \neq 0$ (e.g., $L_1: (1, 2, 3) + t(0, 0, -1)$ intersects $z = 0$ at the point $Q = (1, 2, 0)$).
 * **Parallel, no common points:** $n \cdot v = 0$ and $n \cdot p \neq d$ (e.g., $L_2: (1, 2, 3) + t(1, 0, 0)$ is strictly parallel to $z = 0$).
 * **Contained in the plane:** $n \cdot v = 0$ and $n \cdot p = d$ (e.g., $L_3: (1, 2, 0) + t(1, 0, 0)$ lies entirely inside $z = 0$).
